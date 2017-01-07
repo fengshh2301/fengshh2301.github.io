@@ -1,180 +1,129 @@
-<!DOCTYPE HTML>
-
-    <html lang="zh-Hans">
-  
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
   
   <title>Hello World | Hexo</title>
-  <meta name="author" content="John Doe">
-  
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
-  
-  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <meta property="og:title" content="Hello World"/>
-  <meta property="og:site_name" content="Hexo"/>
-
-  
-    <meta property="og:image" content="undefined"/>
-  
-
-  
-    <meta http-equiv="Content-Language" content="zh-Hans"/>
-  
-
-  <link href="/img/favicon.png" rel="icon">
-  
-    <link rel="apple-touch-icon" href="/img/apple-icon.ico">
-    <link rel="apple-touch-icon-precomposed" href="/img/apple-icon.ico">
-    
-
-  <link rel="alternate" href="/dark-tech/atom.xml" title="Hexo" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-
-  
-  <!-- Chinese readability improment -->
-  <style type="text/css">
-    article {font-weight: 400;letter-spacing: .01rem;}
-    article .entry{line-height:2;}
-  </style>
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="http://yoursite.com/2017/01/07/hello-world/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
+<meta property="og:updated_time" content="2017-01-07T13:27:28.548Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
   
   
-  <style type="text/css">
-  /* Tim Pietrusky advanced checkbox hack (Android <= 4.1.2) */
-body{ -webkit-animation: bugfix infinite 1s; }
-@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
-</style>
-
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-48887175-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-
-
+    <link rel="icon" href="/favicon.png">
   
-    <!-- 360 Font and Baidu CDN in China -->
-    
-      <link href='http://fonts.useso.com/css?family=Open+Sans:300,400|Playball' rel='stylesheet' type='text/css'>
-    
-  <link href='http://apps.bdimg.com/libs/fontawesome/4.1.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
-  <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+  <link type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/scrollUp/image.css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
   
-
-
-
-<!-- mathjax config similar to math.stackexchange -->
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 </head>
-
-
 <body>
-  <header id="header" class="inner"><div class="padding">
-	<div class="alignleft logo">
-	  <h1><a href="/">Hexo</a></h1>
-	</div>
-	<nav id="main-nav" class="alignright">
-		<input type="checkbox" id="toggle" />
-		<label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu" onclick><i class="fa fa-bars"></i></label>
-	  <ul class="menu">
-	    
-	      <li><a href="/dark-tech/">Home</a></li>
-	    
-	      <li><a href="/dark-tech/archives">Archives</a></li>
-	    
-	      <li><a href="/about">About</a></li>
-	    
-	      <li><a href="/guestbook">GuestBook</a></li>
-	    
-	    
-	    	<li><a href="/dark-tech/atom.xml" target="_blank" title="bruce tan blog rss" class="rss-top"><i class="fa fa-rss"></i></a></li>
-	    
-	  </ul>
-	</nav>
-	<div class="clearfix"></div>
-</div>
-</header>
-  <div id="page-heading-wrap">
-  	<div class="inner">
-      <div class="padding">
-    		
-          <h1>Hello World</h1>
-          <ul>
-            <li>
-              <span class="heading-span">Posted on: </span>
-              <time datetime="2017-01-07T13:27:28.546Z">2017-01-07</time>
-            </li>
-            
-              <li>
-                <span class="heading-span">By: </span>
-
-                
-                  <a href="/" target="_blank">John Doe</a>
-
-                
-
-              </li>
-            
-            <li>
-              <span class="heading-span">With: </span>
-              
-
-                <a href="#ds-thread"><span class="ds-thread-count" data-thread-key="2017/01/07/hello-world/" data-count-type="comments"></span></a>
-              
-            </li>
-          </ul>
-        
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <div class="logo">
+        <img src="/logo.png" alt="Profile Picture">
       </div>
-  	</div>
-  </div>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper" class="padding"><article class="post">
-  
-  
-    <div class="post-content">
-  
+      <div id="title">Hexo</div>
       
-      <div class="entry">
+       <ul class="my-socials">
+  
+ 
+</ul>
+    </div>
+  </div>
+  <div id="header-inner" class="">
+    <nav id="main-nav">
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      <!--
         
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+          
+            <a class="main-nav-link" href="/">首页</a>
+          
+            <a class="main-nav-link" href="/categories/life">生活</a>
+          
+            <a class="main-nav-link" href="/archives">归档</a>
+          
+        
+      -->
+    </nav>
+    <nav id="title-nav" style="display:none">
+      <a href="/">Hexo</a>
+      <img src="/logo.png" alt="Profile Picture">
+      <!--
+      <span id="title-nav-socials">
+        
+       
+     </span>
+      -->
+    </nav>
+    <nav id="sub-nav">
+      
+      <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+    </nav>
+    <div id="search-form-wrap">
+      <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+        <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+        <input type="submit" value="" class="search-form-submit">
+        <input name=tn type=hidden value="bds">
+        <input name=cl type=hidden value="3">
+        <input name=ct type=hidden value="2097152">
+        <input type="hidden" name="si" value="yoursite.com">
+      </form>
+    </div>
+  </div>
+  <div class="site-nav" style="display: none;">
+    <ul>
+      
+      
+        <li><a href="/">首页</a></li>
+      
+        <li><a href="/categories/life">生活</a></li>
+      
+        <li><a href="/archives">归档</a></li>
+      
+      
+    </ul>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/07/hello-world/" class="article-date">
+  <time datetime="2017-01-07T13:27:28.546Z" itemprop="datePublished">2017-01-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hello World
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
@@ -184,176 +133,62 @@ body{ -webkit-animation: bugfix infinite 1s; }
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
-        
-      </div>
-      <footer>
-        
-          
-          
-          <div class="share">
-  
-
-    
-      <div class="bdsharebuttonbox"><a href="#" class="bds_twi" data-cmd="twi" title="Share to Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="Share to Facebook"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="Share to Wechat"></a><a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="Share to QQ Friends"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="Share to linkedin"></a><a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a></div>
-	  <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","bdysc","tqq","bdxc","kaixin001","tqf","tieba","douban","tsohu","bdhome","sqq","thx","qq","ibaidu","taobao","hi","baidu","sohu","t163","qy","meilishuo","mogujie","diandian","huaban","leho","share189","duitang","hx","tfh","fx","youdao","sdo","qingbiji","ifeng","people","xinhua","ff","mail","kanshou","isohu","yaolan","wealink","xg","ty","iguba","fbook","twi","deli","s51","s139","linkedin","copy","print"],"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{},"image":{"viewList":["twi","fbook","tsina","weixin","mail","copy","sqq","linkedin","youdao","qzone","renren","douban"],"viewText":"Share to","viewSize":"24"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-    
-
-    
-
-    
-  
-</div>
-          
-
-        
-        <div class="clearfix"></div>
-      </footer>
+      
     </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://yoursite.com/2017/01/07/hello-world/" data-id="cixnb7m3v0000jorsomq3yivl" class="article-share-link">Share</a>
+      
+
+      
+    </footer>
+  </div>
+  
+    
+  
 </article>
 
-
-
-<nav id="pagination" >
-    
-    
-    <div class="clearfix"></div>
-</nav>
-
-<section id="comment">
-  <h2 class="title">Kommentare</h2>
-
-  
-
-  <!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
-  <!-- 多说评论框 end -->
-  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-  <script type="text/javascript">
-  var duoshuoQuery = {short_name:"datablog"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-  </script>
-  <!-- 多说公共JS代码 end -->
-
-  
 </section>
-
-</div></div>
-    <aside id="sidebar" class="alignright"><div class="padding">
-	
-	  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" autocomplete="off" name="q" maxlength="20" results="0" placeholder="Suche">
-    <input type="hidden" name="q" value="site:yoursite.com">
-  </form>
-</div>
-	
-	  
-	
-	  
-<div class="widget recent-post">
-  <h3 class="title">Neueste Artikel</h3>
-  <ul class="entry">
-    
-      <li>
-        <a href="/2017/01/07/hello-world/">Hello World</a>
-      </li>
-    
-  </ul>
-</div>
-
-	
-	  
-	
-	  <iframe width="100%" height="120" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=10&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=5594792135&verifier=676ff25e&dpc=1"></iframe>
-	
-	  <div class="widget category">
-	<h3 class="title">Link</h3>
-	<ul class="entry">
-		
-        	<li><a href="https://www.google.com/">Google</a></li>
-      	
-        	<li><a href="https://github.com/">Github</a></li>
-      	
-        	<li><a href="http://hijiangtao.github.io/">hijiangtao</a></li>
-      	
-	</ul>
-</div>
-	
-</div></aside>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="padding">
-	<div class="alignleft">
-	  
-	  Copyright&copy;2013-2017 <a href=" / ">John Doe</a>
-	  
-	  | Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-	  and Theme by <a href="https://github.com/hijiangtao/dark-tech/" target="_blank">Dark-Tech</a> | <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000257487'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s96.cnzz.com/z_stat.php%3Fid%3D1000257487' type='text/javascript'%3E%3C/script%3E"));</script>
-	</div>
-
-	<div class="alignright">
-		
-		
-			<a href="https://github.com/https://github.com/hijiangtao" target="_blank" title="John Doe Github"><i class="fa fa-github-square"></i></a>	
-		
-		
-		
-			<a href="http://www.weibo.com/http://weibo.com/hijiangtao" target="_blank" title="John Doe Weibo"><i class="fa fa-weibo"></i></a>	
-		
-		
-		
-		
-			<a href="/dark-tech/atom.xml" target="_blank" title="John Doe RSS"><i class="fa fa-rss-square"></i></a>
-		
-	</div>
-
-	<div class="clearfix"></div>
-</div>
-
-<div class="scroll-top"><i class="fa fa-arrow-circle-up"></i></div>
-</footer>
+        
+      </div>
+      <footer id="footer">
   
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Theme <a href="https://github.com/henryhuang/oishi" target="_blank">Oishi</a>, Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!--
+      <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/categories/life" class="mobile-nav-link">生活</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    -->
+    
 
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"datablog"};
-(function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = 'http://static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script>
+<!-- 百度分享 start -->
+
+<!-- 百度分享 end -->
+
+<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 
 
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.js"></script>
-<script src="/js/gallery.js"></script>
+<script src="/js/jquery.scrollUp.min.js"></script>
+<script src="/js/jquery.transform.js"></script>
+<script src="/js/menu.js"></script>
 
+<script src="/js/script.js"></script>
+<script src="/js/scrollUp.js"></script>
 
-
-<script type="text/javascript">
-$(window).scroll(function() {
-
-    if($(this).scrollTop() > 400) {
-        $('.scroll-top').fadeIn(200);
-    } else {
-        $('.scroll-top').fadeOut(200);
-    }
-});
-
-$('.scroll-top').bind('click', function(e) {
-    e.preventDefault();
-    $('body,html').animate({scrollTop:0},200);
-});
-</script>
-
+  </div>
 </body>
 </html>
