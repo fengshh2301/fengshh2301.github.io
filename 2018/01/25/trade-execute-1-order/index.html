@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="交易执行," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="live for dream">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="交易，说简单一点就是一个下单器，点击一下，给服务器报送一个交易请求，然后等待交易所撮合成交，或者主动撤单。可是真的有这么简单吗？ 要做一个自动下单系统，要让它像我们自己工作一样，其实挺难。  稳定：必须在交易期间不间断运行，不能崩溃。  准确：执行的效果必须如写交易策略的人所想，而不能出差错。比如明明想某价位买开一手，结果变成卖开一手或买平一手或买开两手。一次操作有四个参数（其实更多，有机会详述）">
+<meta name="keywords" content="交易执行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="下单系统">
+<meta property="og:url" content="http://yoursite.com/2018/01/25/trade-execute-1-order/index.html">
 <meta property="og:site_name" content="Jason&#39;s Blog">
-<meta property="og:description" content="live for dream">
+<meta property="og:description" content="交易，说简单一点就是一个下单器，点击一下，给服务器报送一个交易请求，然后等待交易所撮合成交，或者主动撤单。可是真的有这么简单吗？ 要做一个自动下单系统，要让它像我们自己工作一样，其实挺难。  稳定：必须在交易期间不间断运行，不能崩溃。  准确：执行的效果必须如写交易策略的人所想，而不能出差错。比如明明想某价位买开一手，结果变成卖开一手或买平一手或买开两手。一次操作有四个参数（其实更多，有机会详述）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-18T13:15:11.512Z">
+<meta property="og:updated_time" content="2018-01-25T13:41:51.547Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
-<meta name="twitter:description" content="live for dream">
+<meta name="twitter:title" content="下单系统">
+<meta name="twitter:description" content="交易，说简单一点就是一个下单器，点击一下，给服务器报送一个交易请求，然后等待交易所撮合成交，或者主动撤单。可是真的有这么简单吗？ 要做一个自动下单系统，要让它像我们自己工作一样，其实挺难。  稳定：必须在交易期间不间断运行，不能崩溃。  准确：执行的效果必须如写交易策略的人所想，而不能出差错。比如明明想某价位买开一手，结果变成卖开一手或买平一手或买开两手。一次操作有四个参数（其实更多，有机会详述）">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/25/trade-execute-1-order/"/>
 
 
 
 
 
-  <title>分类 | Jason's Blog</title>
+  <title>下单系统 | Jason's Blog</title>
   
 
 
@@ -260,40 +261,192 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/25/trade-execute-1-order/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Feng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mine.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jason's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">分类</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 4 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/交易系统/">交易系统</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/转载/">转载</a><span class="category-list-count">2</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">下单系统</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T21:31:14+08:00">
+                2018-01-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/交易系统/" itemprop="url" rel="index">
+                    <span itemprop="name">交易系统</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/25/trade-execute-1-order/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/25/trade-execute-1-order/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>交易，说简单一点就是一个下单器，点击一下，给服务器报送一个交易请求，然后等待交易所撮合成交，或者主动撤单。可是真的有这么简单吗？</p>
+<p>要做一个自动下单系统，要让它像我们自己工作一样，其实挺难。</p>
+<ol>
+<li><p>稳定：必须在交易期间不间断运行，不能崩溃。</p>
+</li>
+<li><p>准确：执行的效果必须如写交易策略的人所想，而不能出差错。比如明明想某价位买开一手，结果变成卖开一手或买平一手或买开两手。一次操作有四个参数（其实更多，有机会详述），一个都不可以错。</p>
+</li>
+<li><p>快速：在可能的情况下，我们永远要让系统越快越好，因为越快越能体现交易的意图。当然视交易意图或者说策略不同而影响不一样。同样的慢一毫秒，对高频策略，秒级策略和分钟K策略，影响不可同日而语。</p>
+<p>​</p>
+<p>​</p>
+</li>
+</ol>
+<p>以上的要求如何达到？有空继续说。。。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/交易执行/" rel="tag"># 交易执行</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/25/trade-forcast-4-mining/" rel="next" title="深度挖掘">
+                <i class="fa fa-chevron-left"></i> 深度挖掘
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/25/trade-execute-2-strategy/" rel="prev" title="策略自定义">
+                策略自定义 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -302,6 +455,17 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="2018/01/25/trade-execute-1-order/"
+           data-title="下单系统" data-url="http://yoursite.com/2018/01/25/trade-execute-1-order/">
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         

@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="live for dream">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jason&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="Jason&#39;s Blog">
+<meta property="og:description" content="live for dream">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jason&#39;s Blog">
+<meta name="twitter:description" content="live for dream">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/2/"/>
+
+
+
+
+
+  <title>Jason's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?45a0c096387ab115db0a9d6929718a74";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jason's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/20/trade-1-preface/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Feng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mine.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jason's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/20/trade-1-preface/" itemprop="url">前言</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-20T20:57:44+08:00">
+                2018-01-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/交易系统/" itemprop="url" rel="index">
+                    <span itemprop="name">交易系统</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/20/trade-1-preface/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/20/trade-1-preface/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>有一个搭建一个交易系统的想法，在新的2018到来之际，终于下定决心，要行动起来。在此立言为证。</p>
+<p>说到交易，个人现在的体会是：这是一个反馈的过程。你需要不断的猜测-&gt;验证-&gt;修正-&gt;猜测-&gt;…，或许这是一条没有尽头的路，回头也不容易。也就意味着，本博中的内容会随着个人体会而变化。</p>
+<p>循着前面的划分，交易的两个方面，猜测和验证，我将整体框架分为两个方面：思考（猜测）和行动（执行）。</p>
+<p>要猜测首先要有数据，有信息，所以第一步要采集相关信息，包括行情，基本面，消息等等；然后进行数据处理和分析，可能需要用到一些工具，比如python大数据处理库；由此得出一些结论，形成一些报告，需要用到AI了；最后是这些原始信息，中间数据，以及最终等到的猜测或者说报告（通俗说就是交易思路），需要一个展示平台，或许就是一个网站了。</p>
+<p>执行的层面来说，就是一个标准的交易平台了，其中包括风控，管理，交易，策略等等，不详细说了。</p>
+<p>下面展开。。。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/19/shell-help/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Feng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mine.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jason's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/19/shell-help/" itemprop="url">shell命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-19T01:09:57+08:00">
+                2018-01-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/19/shell-help/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/19/shell-help/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="ubuntu-shell"><a href="#ubuntu-shell" class="headerlink" title="ubuntu shell"></a>ubuntu shell</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root #修改root密码</span><br><span class="line">sudo apt-get install xxxxx   #安装</span><br><span class="line"></span><br><span class="line">sudo apt-get remove xxxxx #卸载</span><br><span class="line"></span><br><span class="line">7z        #7z文件处理</span><br><span class="line"></span><br><span class="line">zip #zip文件压缩</span><br><span class="line"></span><br><span class="line">unzip #zip文件解压</span><br><span class="line"></span><br><span class="line">tar #tar，tar.gz文件处理</span><br><span class="line"></span><br><span class="line">which #查找程序路径，例如 which python</span><br><span class="line"></span><br><span class="line">uname -r #内核版本</span><br><span class="line"></span><br><span class="line">cat /etc/issue #系统版本</span><br><span class="line"></span><br><span class="line">lsb_release -a #系统详细版本</span><br></pre></td></tr></table></figure>
+<h2 id="centos-shell"><a href="#centos-shell" class="headerlink" title="centos shell"></a>centos shell</h2>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/19/vim-help/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Feng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mine.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jason's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/19/vim-help/" itemprop="url">vim命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-19T00:55:10+08:00">
+                2018-01-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/19/vim-help/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/19/vim-help/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="查看并编辑二进制文件"><a href="#查看并编辑二进制文件" class="headerlink" title="查看并编辑二进制文件"></a>查看并编辑二进制文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> <span class="string">"打开文件"</span></span><br><span class="line">vim -b datafile</span><br><span class="line"> <span class="string">"转成十六进制"</span></span><br><span class="line">:%!xxd</span><br><span class="line"> <span class="string">"转换回来"</span></span><br><span class="line">:%!xxd -r</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ci<span class="string">'、ci"、ci(、ci[、ci&#123;、ci&lt;                 # 分别更改这些配对标点符号中的文本内容</span></span><br><span class="line"><span class="string">di'</span>、di<span class="string">"、di(、di[、di&#123;、di&lt;                 # 分别删除这些配对标点符号中的文本内容</span></span><br><span class="line"><span class="string">yi'、yi"</span>、yi(、yi[、yi&#123;、yi&lt;                 <span class="comment"># 分别复制这些配对标点符号中的文本内容</span></span><br><span class="line">vi<span class="string">'、vi"、vi(、vi[、vi&#123;、vi&lt;                 # 分别选中这些配对标点符号中的文本内容</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/19/my-world-view2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Feng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mine.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jason's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/19/my-world-view2/" itemprop="url">转载 我的世界观二</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-19T00:50:12+08:00">
+                2018-01-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/转载/" itemprop="url" rel="index">
+                    <span itemprop="name">转载</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/19/my-world-view2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/19/my-world-view2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>这篇比较长，大学的经历让我的世界观有了个很清晰的模型，这个世界观对我毕业后的工作起到非常大的帮助，这篇是《我的世界观》终结篇，毕业后进入知道创宇直到现在的部分将在以后的相关文章（比如《如何带团队》系列文章）里逐渐铺开，这里就暂不提了。</p>
+<p><strong>牛逼思维</strong></p>
+<p>大学前的经历，让我掌握了一个特别牛逼的思维：<br>站在更高一个层次，俯瞰时，很多问题都可以轻易解决。</p>
+<p>高考后的那个假期，当我看完《时间简史》与《果壳中的宇宙》时，更加坚信这个道理，后来看了加来道雄的《平行宇宙》等科普书籍时，意识到这些牛逼的物理学家的顶层思想是通的。他们也是一个圈子，有时候我会想如果我能进入这个圈子该多好，不过仅仅是想想。</p>
+<p>宇宙学书籍有个这类思维对我来说非常受用，和维度有关，是这样描述的：</p>
+<p>———描述开始———</p>
+<p>宇宙是多维的，我们在3维，有上下前后左右3个方向，可以任意走动，我们的世界还有个单向的时间维度，只能往前，没法后退，这就是我们的世界。</p>
+<p>现在想象下，你的影子投射在2维平面上，比如一个平坦的地面，2维平面上存在生物，它们有前后左右2个方向，却没上下方向，它们没有厚度，时间维度对它们来说，也只能往前，没法后退。</p>
+<p>你的影子对于这些生物来说是一种超自然现象，它们在研究影子的本质，却不得其解，它们想办法捕获到了影子的无数形态，并举办了各种研讨大会，视图破译影子的奥秘，可无论它们再怎么努力，也无法猜到，2维上的影子是3维的我们投射下去的，3维的我们实在太复杂了，连我们自己都没搞懂，它们怎么可能搞懂。</p>
+<p>———描述结束———</p>
+<p>霍金举的例子是：飞机飞过群山时，飞机的影子在群山2维表面上的表现。加来道雄举的例子是：小孩把水塘里的金鱼拿出水面时，鱼的惊讶。</p>
+<p>这些例子都一个解，那就是我开头说的：<br>站在更高一个层次（维度），俯瞰时，很多问题都可以轻易解决。</p>
+<p>这就是为什么古人说研究达到登峰造极的时刻，会有种一览众山小的感觉。</p>
+<p>这种感觉非常好，很容易上瘾。</p>
+<p><strong>工程化</strong></p>
+<p>缓过神来吧，上瘾不一定是好事，大学时我的偶像从爱因斯坦又增加了一位：奥本海默。二战期间，他被罗斯福总统临危任命为曼哈顿原子弹计划的负责人。二战的压力摆在那，奥本海默聚集了全球最牛逼的一群科学家与工程师，虽然爱因斯坦拒绝了，不过奥本海默正是根据爱因斯坦的质能方程为理论基础，带队搞出的原子弹，实验失败过几次，在即将成功的那次，奥本海默是颤抖着下达引爆指令。后来原子弹投到了日本的广岛与长崎，终结了二战。</p>
+<p>我佩服他是因为，他带队把理论的牛逼变成了实实在在可以感受到的牛逼，这是个工程化的过程。</p>
+<p>他的晚年是痛苦的，他觉得自己是世界的毁灭者。</p>
+<p>在我看来，这样的成就是人类文明的成就，不需要痛苦。人类文明的任何一个关键进展点都是伴随着那个时代的巨大争议、甚至引起战争、总有无数的人会作为文明前进的陪葬品。</p>
+<p>贴张他两的照片：</p>
+<p>这里说的“牛逼思维”与“工程化”完善了我的世界观，说通俗了就是：不仅得站得高看得远，还得实战。</p>
+<p>既然提到了工程化，我就多提一点，最近看了王银的《程序员的心理疾病》（大家可以到他的博客www.yinwang.org去找），里面有段提得特别好，直接转摘过来：</p>
+<p>———转摘开始———</p>
+<p>由于程序员的工作最近几年比较容易找，工资还不错，所以很多程序员往往只看到自己的肚脐眼，看不到自己在整个社会里的位置其实并不是那么的关键和重要。很多程序员除了自己会的那点东西，几乎对其它领域和事情完全不感兴趣，看不起其他人。这就是为什么我的前同事 TJ 作为一个资深的天体物理学家，在一个软件公司里面那么卑微。貌似会写点 node.js，iOS 软件的人都可以对他趾高气昂的样子，而其实这些东西的价值哪里可能跟 TJ 知道的物理知识相提并论。很多科学家其实都 可以轻而易举的掌握程序员知道的东西，有人却认定了他们不是这个专业的，不懂我们的东西，或者故意把问题搞复杂，让他们弄不明白。让人感觉是在阴沟里翻了船被老鼠欺负。</p>
+<p>如果力学工程师犯了错误，飞机会坠毁；如果结构工程师犯了错误，大桥会垮塌；可是如果软件工程师犯了错误，大不了网站挂掉一小时，重启一下貌似又好了。所以所谓“软件工程师”，由于门槛太低，他们的工作严谨程度，其实是根本没法和力学工程，结构工程等真正的工程师相提并论的。实际上“软件工程”这个名词根本就是扯淡的，软件工程师也根本不能被叫做“工程师”。跟其他的工程不一样，软件工程并不是建立在科学的基础上的，计算机科学也根本不是科学。</p>
+<p>———转摘结束———</p>
+<p><strong>优等生</strong></p>
+<p>来看看我的大学。</p>
+<p>北京化工大学，我的专业是材料学院的生物功能材料。选择生物的原因是：我高二时生物奥赛拿了个省级二等奖，我老爸是研究食用菌的，算是从小对我的熏陶吧。</p>
+<p>大学入学考试时我拿了个优等生，5%名额，我的班级就我一人。有天我被通知去教务处，主任老太欣赏地看了看我，说：“你是优等生，有机会进入我校的实验班，再参加一次考核，通过即可，当然也可以放弃这个机会。”我说：“我放弃。”</p>
+<p>我的想法很简单，我不想争什么名次，也不想被所谓的实验班束缚住，高中的每个月的名次之争已经让我厌恶至极，高考冲刺那几个月是我最轻松的时刻，我很明白我要的是什么，我想赶紧脱离这所高中，我已经被这样的教育束缚着喘不过气，在高中课堂上，我经常和老师争论到面红耳赤，多次争论让我越发对老师的古板感到不可思议。</p>
+<p>但是我也不想不负责任，我成绩那样好，上个名牌大学绰绰有余，家人也会有面子，我当然想过要上什么清华北大之类的，这样更能对得住父母的辛苦栽培，但，我真无所谓，我知道：大学的时间一定是我可控的！</p>
+<p>大学入学考试的战果让同学们都很佩服，优等生是有福利的，包括奖学金。</p>
+<p><strong>堕落生</strong></p>
+<p>戏剧性的是，有天我进入图书馆，看到好几排书架都是计算机相关的，当时的心情我至今难忘，因为我对计算机一窍不通，我甚是惊恐，我意识到自己渺小到可怕。</p>
+<p>我知道计算机一定可以加速我的效率，拿什么入手呢？Flash动画！我觉得很酷，于是第一本书是Flash 6动画相关的，几个月后的自学实战，我已经可以独立做Flash动画了，自己做了个超级简单的MV，给学院晚会做了个开场动画，给我加入的生物协会做了个宣传动画，后来给心仪女生做了表白动画（这在我们校园论坛还可以找到当年的热帖），2012年我的婚礼电子邀请函也是我亲自花了一晚的时间做的Flash动画，这门技能根本忘不了，就好像学会骑车一样，想忘记是很难的，真保值。</p>
+<p>我就是这样“误入歧途”的，我的同学都觉得我堕落了，逃课是常事，能正常上课才见鬼了，经常翻墙出校园在网吧通宵，成绩一落千丈，挂科挂到差点要退学，我记得有次班会，党委书记妹子痛恨我们这样的行为到哭，我那天非常认真地和她说：“你们现在很难理解我，这是正常的，其实我是个很努力的人，我在追求我想追求的东西。”她说：“你不觉得你的专业可惜了吗？那你为何要选择这个专业？”我说：“不可惜，迟早我会回来的。”</p>
+<p>关于这个好问题，其实我是这样想的，而且早想清楚了，我的专业就业前景我非常不看好，而我看好黑客技术，这个对我来说是“最低成本+最快收益+最大兴趣”的技术。</p>
+<p>“一台电脑，一个网络足矣让我影响世界。”这是我当时的想法，黑客技术的掌握确实让我好几次有能力去影响世界，不过这种影响往往是破坏性的，我还得考虑我未来的生活呢，而且我希望的影响是正面的。</p>
+<p>学习Flash完全是兴趣，玩玩而已，也算是入门计算机的一种方式。如果要说Flash给我在黑客技术领域带来了什么帮助，那还真是帮了大忙，2008年全球第一只Flash CSRF蠕虫是我做的，拿饭否（中国第一家微博）做的实验，后来2013年我们上市的《Web前端黑客技术揭秘》这本书，就大量介绍了Flash黑客技巧，包括这只蠕虫的细节。</p>
+<p>聪明人总是可以把自己的经验融会贯通起来。</p>
+<p>在我同学看来我是堕落生，在我看来，他们中的大多数才是真的堕落生，我实在没法理解上个大学还有为了名次为了排名而天天躲在教室埋头苦读，每每路过这样的教室，我都感慨的很。</p>
+<p>不过我的感慨比较假，因为我相信一个道理：这个世界必须有海量的平庸存在，绝大多数都应该是平庸的。</p>
+<p>注意：我并没觉得平庸不好，每个人的幸福方式不一样，我不想改变别人的追求。</p>
+<p><strong>机房</strong></p>
+<p>材料学院是有自己的机房的，里面几十台电脑用于学生进行材料模拟课程，我垂涎这个机房已久，那年是病毒横向的时代，U盘传播、网页传播，一感染就是一群机器，我通过自己掌握的黑客技术，专门编写病毒专杀，在校园论坛上传播我的解决方案，帮老师，帮教导员解决电脑中毒问题，于是顺利拿到机房的管理权限。</p>
+<p>从此我经常不回宿舍，打个地铺就睡机房了，一个疯狂的黑客环境就这样有了。</p>
+<p>经常有慕名而来的同学抱着电脑来找我帮忙，比如杀毒啦、恢复文件啦，来的女生居多，还有来合照的，送饭的，通宵找我学习请教的。</p>
+<p>我特别享受一个人在机房的感觉，至今难忘。</p>
+<p>电脑作伴，自学成才。</p>
+<p>这种特立独行并没让我成为没法接触的怪人，我认为思维的特立独行能让自己真的做出与众不同的事，这不影响交际，不影响我去帮助需要帮助的人。</p>
+<p><strong>方法论</strong></p>
+<p>很多人问我学习的方法，我这里一并分享下。</p>
+<p>为什么我会强调世界观，因为世界观是我思考这个世界的方式，这个方式决定了我如何看待这个世界。</p>
+<p>我对世界充满好奇，小时候是这样，此刻我还是这样，大学毕业前我痴迷自然科学，现在我还痴迷社会科学，人类这个群体的行为导致了我们看到的这一切。</p>
+<p>在这样的大框架下，形成了我的多种做事的方法论，给你们分享个很受用的一点。</p>
+<p>-&gt; 一门新知识。<br>-&gt; 了解这门知识的概要轮廓（大概了解：是什么、能做什么、为什么会存在）。<br>-&gt; 哪个群体创造/发展的这个知识，这个群体背后的八卦是什么（比如微积分，莱布尼茨和牛顿的八卦），看八卦能更好理解牛人们的思维。<br>-&gt; 原来是这样一门有趣的知识呀，开始深入学习。<br>-&gt; 查遍全球关键资料，我可不想听一家之言。<br>-&gt; 了解这门知识的关联知识是什么。<br>-&gt; 心中了然了，原来这门知识是这样的，还有几个XX问题没解决。<br>-&gt; 运用知识创造出有趣的或以前不存在的东西，如果能解决几个没解决的XX问题最好。<br>-&gt; 一抖身加入这个知识所在的圈子，成为圈内人。<br>-&gt; 用跨界思维给这个圈子带来新鲜感，成为圈内认可的人。</p>
+<p>能运用这样的方法论算是一门大知识了，如果是小点的，少其中几步就行。</p>
+<p>另外我再分享另一种思想：别着急什么都去学，把你最喜欢的最擅长的搞精通，就能悟“道”，这种“道”正是上面所说的“方法论”，它能让你快速掌握其他知识，从而加速扩充你的知识面。</p>
+<p><strong>世界观</strong></p>
+<p>我曾经的每个经历犹如一砖一瓦，不断在完善我的世界观建筑，大学的经历让我的世界观有了个很清晰的模型，我们有无数前人的经历可以借鉴，我的世界观让我懂得独立思考、求学、知足与责任，让我对这个世界充满好奇，让我掌握了牛逼的思维方式与做事的方法论，让我聚焦在正确的事情上，让我迫不及待想做出能正面影响世界的东西。</p>
+<p>不过此刻，我不着急。</p>
+<p>再次提醒，这是我的世界观，看完我的世界观的同学，以后不要再来问我学习相关的事了，因为我自己从来不问，我只探讨一些值得探讨的点。</p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzA3NTEzMTUwNA==&amp;mid=200044901&amp;idx=1&amp;sn=2a40b65874b54f7d2c80303ee6558d9b#rd" target="_blank" rel="noopener">原文地址</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/18/my_world_view1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Feng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mine.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jason's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/18/my_world_view1/" itemprop="url">转载 我的世界观一</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-18T20:35:16+08:00">
+                2018-01-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/转载/" itemprop="url" rel="index">
+                    <span itemprop="name">转载</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/18/my_world_view1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/18/my_world_view1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>引子</strong></p>
+<p>我写这个系列是因为我的读者好多高中生、甚至初中生（有小学生吗？出来吼下）、当然还有好些迷茫的大学生，我将他们问我的问题都归纳下，我以我自己的成长历程为主线去谈点东西，谈谈我的世界观，我的世界观让我觉得有戏。</p>
+<p>你们务必牢记，我的世界观是我的，你可以参考，然后形成你的世界观，50年后我是个老头，你也是，没什么区别，那时如果有机会见面，会很有趣，老头也有老头的霸气。对我来说，我从小就觉得，如果我老了还不能正面影响世界的话，会很遗憾，有种白活了的感觉。</p>
+<p>幸福的定义是相对的，成功也一样，虽然我从小的偶像是妇孺皆知的爱因斯坦，虽然他26岁就提出了狭义相对论，但这不影响我自己的成长，并且我从来都觉得：成功与年纪无关。如果我干的动的话，会坚持到老死的最后一刻。</p>
+<p><strong>小学与初中</strong></p>
+<p>我从小不思考竞争这事，小学与初中我在乡下一直过得很自在，老爸是做食用菌的，有个自己的简陋实验室，他的一言一行影响了我，让我具备独立思考能力，让我知道什么是求学、知足、责任。有一年地方电台与报社来采访父母，当时我觉得他们可牛逼了。乡下嘛，能有什么视野，生活如童话般，我几乎不按常理放学，和小伙伴们走各种神奇的“小路”，绕着各种弯回到家。</p>
+<p>一到周末，就是爬山涉水，带好装备，因为山中至少有野猪，我大舅的狼狗就被野猪咬死，所以从小对野猪是敬畏的，但是这毫不影响我们跋山涉水，南方原始森林比较多，从小我就对原始森林充满好奇感，有一年晚上8点多，天色已黑，我们从山里下来，那一幕深深震撼到我的心灵，我们看到山的右侧梯田与身边的草丛全是萤火虫，那晚夜色绝美，再配上这无数萤火虫，美得我们忘记山中恐怖，要知道山中到处是坟墓，但我们不那样害怕坟墓，甚至有多次的近距离接触，包括山谷中的骷髅。我对世界充满了好奇。</p>
+<p>我此生估计仅此一次见到如此震撼的萤火虫军团，后来凄凉地被告知萤火虫是害虫。美好的东西总是这样伴随着“瑕疵”，可又怎样，它们也是生命，如果非要把它们认为是瑕疵，我们呢？</p>
+<p>初三要升学考试，从此知道了什么是竞争，什么是名次，我的邻居大人们都觉得我太野，没前途，老师的鼓励与怀疑，家人的鼓励与怀疑，让我知道人要出头还是得忍一忍，先考上最牛逼的高中再说吧。然后我考上的那一个暑假，邻居们的眼神都变了……</p>
+<p><strong>高中</strong></p>
+<p>高一，进入城市，我开始疯狂投入各大书店与图书馆，宇宙学是我最痴迷的，从小我对夜空，对肉眼可见的银河有种莫名感觉，我可以在天台上躺着，数流星，偶尔会有只萤火虫悠哉飞过。由于高一的疯狂，成绩一落千丈，又是那种鼓励与怀疑，我很讨厌有人要和我比，我甚至内心觉得如果我真的要和你比，你肯定不是对手，我实在不屑他们看重的那种名次，有次我英文拿了第一，引起了同桌的捶胸顿足，咬牙切齿地说真想揍我，我心想：我根本没聚焦在高一课本上，我要是聚集了，你咋办啊，得吐血而亡吗？</p>
+<p>我终于知道等我进入大学会更加自由，那就努力下吧，而且真有必要掌握好书本知识，好，开始聚集，高二开始的那个暑假开始疯狂冲刺，根本不睡午觉，偶尔凌晨3点多回宿舍，因此同学都叫我“3点半”，除了仔细去理解课本知识外，我在找一些牛逼的课外读物，不过大多课外读物都是扯淡的，还好有幸我拿到了几本书：</p>
+<p>1、一女生送我的8几年出版的高中数学书，可能是那年恢复高考后的第一本，解题思路实在怪异，后来这女生成为我现在的老婆；<br>2、宿管送我的一本高等数学，宿管不可小觑，他参加成人高考留下的书；<br>3、图书馆翻到的一本相对论，这下彻底颠覆我了；</p>
+<p>这几本神书简直给我打开了另外一个世界，自从看完微积分，可以自己推导如力学里面的经典公式时，比如加速度，我更是气焰嚣张，我那时的感觉是：物理、化学、数学都是通的，课本是死的，如果我们站在更高层去俯视一些事物的时候，会更清晰。这引起了老师和同学的异常反应，因为实在不可思议地快速解题，突飞猛进，有时解题思路实在太怪，也被老师警告过：高考时千万别这样，也许会得零分。</p>
+<p>我觉得已经差不多了，我从来没拿到年段第一，但是都把要打败的对手打败过，足矣。</p>
+<p>在大家焦头烂额冲刺高考的时候，我在看哈利波特与娱乐杂志。</p>
+<p>最终我稳稳当当地上了所还不错的帝都大学，表姐问我想要什么礼物，我说送我《时间简史》与《果壳中的宇宙》，在大家异样的眼光下，高考后的那个暑假我通读了这两本书，觉得精彩至极，我知道我高中的知识总会淡忘的，有时候我会问自己，既然会忘记，那我们学来做什么？后来我才知道：忘记了知识，却收获了学习方法。而我非常肯定的一点是：这些经历总有一天会形成我的世界观。</p>
+<p>现在我们一直强调要跨界，为的也是寻求更多解题方法，打开我们固化的思维，逐渐完善我们的世界观。</p>
+<p>下一篇我会写我的大学，一个生物功能材料专业的人如何跌跌撞撞进入互联网安全行业。</p>
+<p>最后强调下，这是我的世界观。</p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzA3NTEzMTUwNA==&amp;mid=200044242&amp;idx=1&amp;sn=7496bc07e3d12e63bc8bdb7deaa9c083#rd" target="_blank" rel="noopener">原文地址</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/08/hexo_help/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Feng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mine.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jason's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/08/hexo_help/" itemprop="url">使用hexo指南</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-08T20:35:16+08:00">
+                2018-01-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/08/hexo_help/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/08/hexo_help/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>欢迎来到jason的博客空间。这是我的第一个github博客，记录了我如何搭建一个github博客空间。其中细节略过，网上有许多文章讲述。</p>
+<h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><ul>
+<li>一个github账户</li>
+<li>安装git客户端</li>
+<li>创建一个仓库，仓库名字必须是：username.github.io，其中username是github用户名</li>
+<li>域名绑定，这里没有绑定，就不涉及了。有兴趣的可以参考<a href="http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" title="绑定域名" target="_blank" rel="noopener">此文</a></li>
+</ul>
+<h2 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h2><p>安装nodejs</p>
+<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><ul>
+<li><p>安装hexo：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ cd /d/gitspace/blog/</span><br><span class="line">$ hexo init</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<p>  此时博客已经生成，可以在本地浏览了，默认端口是4000，如果要换端口，使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s --debug -p 5000</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>常见的hexo命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成</span><br><span class="line">hexo server #本地预览服务</span><br><span class="line">hexo deploy #部署</span><br><span class="line">hexo help  #帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line"></span><br><span class="line">hexo n 相当于 hexo new</span><br><span class="line">hexo g 相当于 hexo generate</span><br><span class="line">hexo s 相当于 hexo server</span><br><span class="line">hexo d 相当于 hexo deploy</span><br><span class="line"></span><br><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br></pre></td></tr></table></figure></p>
+<p>hexo博客的主题可以更换，还可以修改hexo项目的配置文件，满足个性化的需求。</p>
+<h2 id="markdown编辑器"><a href="#markdown编辑器" class="headerlink" title="markdown编辑器"></a>markdown编辑器</h2><p>安装一个markdown编辑器，就可以愉快的写博客了</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/mine.png"
+                alt="Jason Feng" />
+            
+              <p class="site-author-name" itemprop="name">Jason Feng</p>
+              <p class="site-description motion-element" itemprop="description">live for dream</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jason Feng</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"fsh"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
