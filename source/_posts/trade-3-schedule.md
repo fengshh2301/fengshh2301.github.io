@@ -9,7 +9,7 @@ categories: [交易系统]
 
 20180120----20180122
 
-![schedule](../images/schedule.png)
+![schedule](/images/schedule.png)
 
 
 
