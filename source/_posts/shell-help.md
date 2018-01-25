@@ -6,6 +6,8 @@ date: 2018-01-19 01:09:57
 ---
 ## ubuntu shell
 
+<!-- more -->
+
 ```shell
 sudo passwd root #修改root密码
 sudo apt-get install xxxxx   #安装

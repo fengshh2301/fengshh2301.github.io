@@ -4,7 +4,7 @@ date: 2018-01-08 20:35:16
 tags: [hexo]
 categories: [工具]
 ---
-欢迎来到jason的博客空间。这是我的第一个github博客，记录了我如何搭建一个github博客空间。其中细节略过，网上有许多文章讲述。
+欢迎来到jason的博客空间。这是我的第一个github博客，记录了我如何搭建一个github博客空间。其中细节略过，网上有许多文章讲述。<!-- more -->
 
 ## github
 - 一个github账户

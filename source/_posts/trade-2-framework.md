@@ -5,7 +5,7 @@ tags: [交易系统]
 categories: [交易系统]
 ---
 
-系统架构图：
+系统架构图：<!-- more -->
 
 ![img](../images/5.png)
 

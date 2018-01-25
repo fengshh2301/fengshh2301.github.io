@@ -6,6 +6,9 @@ categories: [工具]
 ---
 
 ### 查看并编辑二进制文件 ###
+
+<!-- more -->
+
 ```bash
  "打开文件"
 vim -b datafile
