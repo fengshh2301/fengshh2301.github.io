@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="交易系统," />
+  <meta name="keywords" content="centos,时区," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="有一个搭建一个交易系统的想法，在新的2018到来之际，终于下定决心，要行动起来。在此立言为证。">
-<meta name="keywords" content="交易系统">
+<meta name="description" content="安装好centos之后，总会发现机器时间与真实时间相差8小时。这其实是时差问题导致。">
+<meta name="keywords" content="centos,时区">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前言">
-<meta property="og:url" content="http://yoursite.com/2018/01/20/trade-1-preface/index.html">
+<meta property="og:title" content="centos时区时间同步">
+<meta property="og:url" content="http://yoursite.com/2018/01/26/centos-ntp/index.html">
 <meta property="og:site_name" content="Jason&#39;s Blog">
-<meta property="og:description" content="有一个搭建一个交易系统的想法，在新的2018到来之际，终于下定决心，要行动起来。在此立言为证。">
+<meta property="og:description" content="安装好centos之后，总会发现机器时间与真实时间相差8小时。这其实是时差问题导致。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-25T13:54:24.662Z">
+<meta property="og:updated_time" content="2018-01-26T14:24:22.922Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前言">
-<meta name="twitter:description" content="有一个搭建一个交易系统的想法，在新的2018到来之际，终于下定决心，要行动起来。在此立言为证。">
+<meta name="twitter:title" content="centos时区时间同步">
+<meta name="twitter:description" content="安装好centos之后，总会发现机器时间与真实时间相差8小时。这其实是时差问题导致。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/20/trade-1-preface/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/26/centos-ntp/"/>
 
 
 
 
 
-  <title>前言 | Jason's Blog</title>
+  <title>centos时区时间同步 | Jason's Blog</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/20/trade-1-preface/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/26/centos-ntp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jason Feng">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">前言</h1>
+          <h1 class="post-title" itemprop="name headline">centos时区时间同步</h1>
         
 
         <div class="post-meta">
@@ -302,8 +302,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-20T20:57:44+08:00">
-                2018-01-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-26T21:49:27+08:00">
+                2018-01-26
               </time>
             
 
@@ -325,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/交易系统/" itemprop="url" rel="index">
-                    <span itemprop="name">交易系统</span>
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
                   </a>
                 </span>
 
@@ -343,8 +343,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/20/trade-1-preface/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/20/trade-1-preface/" itemprop="commentCount"></span>
+                <a href="/2018/01/26/centos-ntp/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/26/centos-ntp/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -372,12 +372,18 @@
       
 
       
-        <p>有一个搭建一个交易系统的想法，在新的2018到来之际，终于下定决心，要行动起来。在此立言为证。<a id="more"></a></p>
-<p>说到交易，个人现在的体会是：这是一个反馈的过程。你需要不断的猜测-&gt;验证-&gt;修正-&gt;猜测-&gt;…，或许这是一条没有尽头的路，回头也不容易。也就意味着，本博中的内容会随着个人体会而变化。</p>
-<p>循着前面的划分，交易的两个方面，猜测和验证，我将整体框架分为两个方面：思考（猜测）和行动（执行）。</p>
-<p>要猜测首先要有数据，有信息，所以第一步要采集相关信息，包括行情，基本面，消息等等；然后进行数据处理和分析，可能需要用到一些工具，比如python大数据处理库；由此得出一些结论，形成一些报告，需要用到AI了；最后是这些原始信息，中间数据，以及最终等到的猜测或者说报告（通俗说就是交易思路），需要一个展示平台，或许就是一个网站了。</p>
-<p>执行的层面来说，就是一个标准的交易平台了，其中包括风控，管理，交易，策略等等，不详细说了。</p>
-<p>下面展开。。。</p>
+        <p>安装好centos之后，总会发现机器时间与真实时间相差8小时。这其实是时差问题导致。<a id="more"></a></p>
+<p>GPS 系统中有两种时间区分，一为UTC，另一为LT（地方时）两者的区别为时区不同，UTC就是0时区的时间，地方时为本地时间，如北京为早上八点（东八区），UTC时间就为零点，时间比北京时晚八小时，以此计算即可</p>
+<p>UTC：世界协调时间(Universal Time Coordinated,UTC)<br>CST：中国沿海时间(北京时间)(China Standard Time UTC+8:00) </p>
+<p>在安装完centos系统后发现时间与现在时间相差8小时，这是由于我们在安装系统的时选择的时区是上海，而centos默认bios时间是utc时间，所以时间相差了8小时。这个时候的bios的时间和系统的时间是不一致的，一个代表 utc 时间，一个代表cst（＋8时区），即上海时间。</p>
+<h3 id="1-修改时区文件"><a href="#1-修改时区文件" class="headerlink" title="1.修改时区文件"></a>1.修改时区文件</h3><p>vi /etc/sysconfig/clock                                          #编辑文件<br>ZONE=”Asia/Shanghai”<br>UTC=false                                                        #设置为false，硬件时钟不于utc时间一致<br>ARC=false</p>
+<h3 id="2-配置时区"><a href="#2-配置时区" class="headerlink" title="2.配置时区"></a>2.配置时区</h3><p>ln -sf /usr/share/zoneinfo/Asia/Shanghai    /etc/localtime       #linux的时区设置为上海</p>
+<h3 id="3-对准时间，需要先安装ntp服务器"><a href="#3-对准时间，需要先安装ntp服务器" class="headerlink" title="3.对准时间，需要先安装ntp服务器"></a>3.对准时间，需要先安装ntp服务器</h3><p>yum install ntp</p>
+<p>rpm -q ntp</p>
+<p>yum -y install ntp</p>
+<p>ntpdate pool.ntp.org                    </p>
+<h3 id="4-设置硬件时间和系统时间一致并校准"><a href="#4-设置硬件时间和系统时间一致并校准" class="headerlink" title="4.设置硬件时间和系统时间一致并校准"></a>4.设置硬件时间和系统时间一致并校准</h3><p>/sbin/hwclock –systohc<br>​                                    </p>
+<h3 id="5-设置系统开机自动启动并启动服务"><a href="#5-设置系统开机自动启动并启动服务" class="headerlink" title="5.设置系统开机自动启动并启动服务"></a>5.设置系统开机自动启动并启动服务</h3><p>systemctl enable ntpd<br>systemctl start ntpd</p>
 
       
     </div>
@@ -395,7 +401,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/交易系统/" rel="tag"># 交易系统</a>
+            <a href="/tags/centos/" rel="tag"># centos</a>
+          
+            <a href="/tags/时区/" rel="tag"># 时区</a>
           
         </div>
       
@@ -408,8 +416,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/19/shell-help/" rel="next" title="shell命令">
-                <i class="fa fa-chevron-left"></i> shell命令
+              <a href="/2018/01/25/trade-execute-4-manage/" rel="next" title="管理">
+                <i class="fa fa-chevron-left"></i> 管理
               </a>
             
           </div>
@@ -418,8 +426,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/20/trade-2-framework/" rel="prev" title="系统架构">
-                系统架构 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/26/centos-mongdb-install-problem/" rel="prev" title="centos7安装mongodb安全事项：ip，端口">
+                centos7安装mongodb安全事项：ip，端口 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -451,8 +459,8 @@
 
   
     <div class="comments" id="comments">
-      <div class="ds-thread" data-thread-key="2018/01/20/trade-1-preface/"
-           data-title="前言" data-url="http://yoursite.com/2018/01/20/trade-1-preface/">
+      <div class="ds-thread" data-thread-key="2018/01/26/centos-ntp/"
+           data-title="centos时区时间同步" data-url="http://yoursite.com/2018/01/26/centos-ntp/">
       </div>
     </div>
 
@@ -479,8 +487,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -544,6 +561,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-修改时区文件"><span class="nav-number">1.</span> <span class="nav-text">1.修改时区文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-配置时区"><span class="nav-number">2.</span> <span class="nav-text">2.配置时区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-对准时间，需要先安装ntp服务器"><span class="nav-number">3.</span> <span class="nav-text">3.对准时间，需要先安装ntp服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-设置硬件时间和系统时间一致并校准"><span class="nav-number">4.</span> <span class="nav-text">4.设置硬件时间和系统时间一致并校准</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-设置系统开机自动启动并启动服务"><span class="nav-number">5.</span> <span class="nav-text">5.设置系统开机自动启动并启动服务</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
