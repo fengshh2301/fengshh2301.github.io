@@ -2,6 +2,7 @@
 title: centos_qt_lgl
 date: 2018-01-28 17:13:54
 tags: [centos,qt,opengl]
+categories: [贴士]
 ---
 
 CentOS 7.3 64位，安装完成Qt5.9.3。随意新建一个Qt Widgets Application。
