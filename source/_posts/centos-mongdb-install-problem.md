@@ -2,7 +2,7 @@
 title: centos7安装mongodb安全事项：ip，端口
 date: 2018-01-26 22:08:57
 tags: [centos,mongdb]
-categories: [工具]
+categories: [贴士]
 ---
 
 mongdb并非关系型数据库，不太在意安全权限之类，这里做一些最基本的措施。修改默认端口，限制访问ip。<!-- more -->

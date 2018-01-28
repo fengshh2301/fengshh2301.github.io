@@ -2,7 +2,7 @@
 title: centos时区时间同步
 date: 2018-01-26 21:49:27
 tags: [centos,时区]
-categories: [工具]
+categories: [贴士]
 ---
 
 安装好centos之后，总会发现机器时间与真实时间相差8小时。这其实是时差问题导致。<!-- more -->
