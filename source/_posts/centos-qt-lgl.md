@@ -5,7 +5,9 @@ tags: [centos,qt,opengl]
 categories: [贴士]
 ---
 
-CentOS 7.3 64位，安装完成Qt5.9.3。随意新建一个Qt Widgets Application。
+CentOS 7.3 64位，安装完成Qt5.9.3。<!-- more -->
+
+随意新建一个Qt Widgets Application。
 
 结果遇到编译问题，提示信息如下：
 
