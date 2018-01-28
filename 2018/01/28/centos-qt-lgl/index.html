@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="交易执行," />
+  <meta name="keywords" content="centos,qt,opengl," />
 
 
 
@@ -79,15 +79,18 @@
 
 
 
-<meta name="keywords" content="交易执行">
+<meta name="description" content="CentOS 7.3 64位，安装完成Qt5.9.3。随意新建一个Qt Widgets Application。 结果遇到编译问题，提示信息如下： error: cannot find -lGL error: collect2: error: ld returned 1 exit status 原因是系统缺乏相应的OpenGL库文件造成，解决方案如下： 进入CentOS系统的终端，依次执行以下命令">
+<meta name="keywords" content="centos,qt,opengl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="策略自定义">
-<meta property="og:url" content="http://yoursite.com/2018/01/25/trade-execute-2-strategy/index.html">
+<meta property="og:title" content="centos_qt_lgl">
+<meta property="og:url" content="http://yoursite.com/2018/01/28/centos-qt-lgl/index.html">
 <meta property="og:site_name" content="Jason&#39;s Blog">
+<meta property="og:description" content="CentOS 7.3 64位，安装完成Qt5.9.3。随意新建一个Qt Widgets Application。 结果遇到编译问题，提示信息如下： error: cannot find -lGL error: collect2: error: ld returned 1 exit status 原因是系统缺乏相应的OpenGL库文件造成，解决方案如下： 进入CentOS系统的终端，依次执行以下命令">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-25T13:55:17.849Z">
+<meta property="og:updated_time" content="2018-01-28T09:29:20.332Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="策略自定义">
+<meta name="twitter:title" content="centos_qt_lgl">
+<meta name="twitter:description" content="CentOS 7.3 64位，安装完成Qt5.9.3。随意新建一个Qt Widgets Application。 结果遇到编译问题，提示信息如下： error: cannot find -lGL error: collect2: error: ld returned 1 exit status 原因是系统缺乏相应的OpenGL库文件造成，解决方案如下： 进入CentOS系统的终端，依次执行以下命令">
 
 
 
@@ -117,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/25/trade-execute-2-strategy/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/28/centos-qt-lgl/"/>
 
 
 
 
 
-  <title>策略自定义 | Jason's Blog</title>
+  <title>centos_qt_lgl | Jason's Blog</title>
   
 
 
@@ -270,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/25/trade-execute-2-strategy/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/28/centos-qt-lgl/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jason Feng">
@@ -287,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">策略自定义</h1>
+          <h1 class="post-title" itemprop="name headline">centos_qt_lgl</h1>
         
 
         <div class="post-meta">
@@ -299,8 +302,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T21:31:37+08:00">
-                2018-01-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-28T17:13:54+08:00">
+                2018-01-28
               </time>
             
 
@@ -322,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/交易系统/" itemprop="url" rel="index">
-                    <span itemprop="name">交易系统</span>
+                  <a href="/categories/贴士/" itemprop="url" rel="index">
+                    <span itemprop="name">贴士</span>
                   </a>
                 </span>
 
@@ -340,8 +343,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/25/trade-execute-2-strategy/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/25/trade-execute-2-strategy/" itemprop="commentCount"></span>
+                <a href="/2018/01/28/centos-qt-lgl/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/28/centos-qt-lgl/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -369,7 +372,16 @@
       
 
       
-        <a id="more"></a>
+        <p>CentOS 7.3 64位，安装完成Qt5.9.3。随意新建一个Qt Widgets Application。</p>
+<p>结果遇到编译问题，提示信息如下：</p>
+<p>error: cannot find -lGL</p>
+<p>error: collect2: error: ld returned 1 exit status</p>
+<p>原因是系统缺乏相应的OpenGL库文件造成，解决方案如下：</p>
+<p>进入CentOS系统的终端，依次执行以下命令，即可解决。</p>
+<p>su</p>
+<p>yum install mesa-libGL-devel mesa-libGLU-devel</p>
+<p>这个可选: yum install freeglut-devel   </p>
+
       
     </div>
     
@@ -386,7 +398,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/交易执行/" rel="tag"># 交易执行</a>
+            <a href="/tags/centos/" rel="tag"># centos</a>
+          
+            <a href="/tags/qt/" rel="tag"># qt</a>
+          
+            <a href="/tags/opengl/" rel="tag"># opengl</a>
           
         </div>
       
@@ -399,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/25/trade-execute-1-order/" rel="next" title="下单系统">
-                <i class="fa fa-chevron-left"></i> 下单系统
+              <a href="/2018/01/26/centos-mongdb-install-problem/" rel="next" title="centos7安装mongodb安全事项：ip，端口">
+                <i class="fa fa-chevron-left"></i> centos7安装mongodb安全事项：ip，端口
               </a>
             
           </div>
@@ -408,10 +424,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/25/trade-execute-3-riskcontrol/" rel="prev" title="风控">
-                风控 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -442,8 +454,8 @@
 
   
     <div class="comments" id="comments">
-      <div class="ds-thread" data-thread-key="2018/01/25/trade-execute-2-strategy/"
-           data-title="策略自定义" data-url="http://yoursite.com/2018/01/25/trade-execute-2-strategy/">
+      <div class="ds-thread" data-thread-key="2018/01/28/centos-qt-lgl/"
+           data-title="centos_qt_lgl" data-url="http://yoursite.com/2018/01/28/centos-qt-lgl/">
       </div>
     </div>
 
