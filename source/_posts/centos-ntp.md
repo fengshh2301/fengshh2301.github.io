@@ -16,7 +16,7 @@ CST：中国沿海时间(北京时间)(China Standard Time UTC+8:00)
 
 ### 1.修改时区文件
 
-vi /etc/sysconfig/clock                                          #编辑文件
+vi /etc/sysconfig/clock
 ZONE="Asia/Shanghai"
 UTC=false                                                        #设置为false，硬件时钟不于utc时间一致
 ARC=false
