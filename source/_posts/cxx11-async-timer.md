@@ -5,7 +5,7 @@ tags: [c++11,异步,timer]
 categories : [贴士]
 ---
 
-​    c++11提供了丰富的时间和线程操作函数，比如 std::this_thread::sleep, std::chrono::seconds等。利用这些可以很方便的实现一个定时器。 
+​    c++11提供了丰富的时间和线程操作函数，比如 std::this_thread::sleep, std::chrono::seconds等。<!-- more -->利用这些可以很方便的实现一个定时器。 
 ​    定时器要求在固定的时间异步执行一个操作，比如boost库中的boost::asio::deadline_timer，以及MFC中的定时器。这里，利用c++11的thread, mutex, condition_variable 来实现一个定时器： 
 ​    定时器要求异步执行任务    ----> 开辟独立的线程 
 ​    定时器要求能够启动和取消 ----> 提供安全的取消操作，使用互斥量和信号量 
