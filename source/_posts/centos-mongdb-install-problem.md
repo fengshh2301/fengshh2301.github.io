@@ -1,7 +1,7 @@
 ---
 title: centos7安装mongodb安全事项：ip，端口
 date: 2018-01-26 22:08:57
-tags: [centos,mongdb]
+tags: [centos,mongodb]
 categories: [贴士]
 ---
 
