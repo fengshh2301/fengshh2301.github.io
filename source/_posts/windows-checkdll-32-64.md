@@ -1,5 +1,5 @@
 ---
-title: windows_checkdll_32_64
+title: windows检查dll是否64位库
 date: 2018-02-01 22:31:44
 tags: [windows,dll,lib,dumpbin]
 categories: [贴士]
