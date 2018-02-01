@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jason&#39;s Blog">
 <meta property="og:description" content="程序中需要使用无锁队列，故引用tbb库，做下记录以防遗忘。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-29T16:39:31.616Z">
+<meta property="og:updated_time" content="2018-02-01T14:50:09.229Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tbb编译">
 <meta name="twitter:description" content="程序中需要使用无锁队列，故引用tbb库，做下记录以防遗忘。">
@@ -373,7 +373,9 @@
 
       
         <p>程序中需要使用无锁队列，故引用tbb库，做下记录以防遗忘。<a id="more"></a></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>去到tbb库根目录</span><br><span class="line">cd tbb</span><br><span class="line">make</span><br><span class="line"><span class="meta">#</span>或者windows系统下</span><br><span class="line">msbuild /P:Configuration=Debug /P:Outdir="../../lib/Debug" tbb.vcxproj</span><br><span class="line">msbuild /P:Configuration=Release /P:Outdir="../../lib/Release" tbb.vcxproj</span><br></pre></td></tr></table></figure>
+<p>进入tbb库根目录。</p>
+<h4 id="linux系统"><a href="#linux系统" class="headerlink" title="linux系统"></a>linux系统</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd tbb</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+<h4 id="windows系统"><a href="#windows系统" class="headerlink" title="windows系统"></a>windows系统</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd tbb</span><br><span class="line">make</span><br><span class="line"><span class="meta">#</span>32位</span><br><span class="line">msbuild /P:Configuration=Debug /P:Outdir="../../lib/Debug" tbb.vcxproj</span><br><span class="line">msbuild /P:Configuration=Release /P:Outdir="../../lib/Release" tbb.vcxproj</span><br><span class="line"><span class="meta">#</span>64位</span><br><span class="line">msbuild /P:Configuration=Debug /P:Outdir="../../lib/Debug" /P:Platform=x64 tbb.vcxproj</span><br><span class="line">msbuild /P:Configuration=Release /P:Outdir="../../lib/Release" /P:Platform=x64 tbb.vcxproj</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -415,6 +417,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/01/windows-checkdll-32-64/" rel="prev" title="windows_checkdll_32_64">
+                windows_checkdll_32_64 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -473,8 +479,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -493,7 +508,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -515,7 +530,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -538,6 +553,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#linux系统"><span class="nav-number">1.</span> <span class="nav-text">linux系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#windows系统"><span class="nav-number">2.</span> <span class="nav-text">windows系统</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
