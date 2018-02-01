@@ -12,7 +12,7 @@ categories: [贴士]
 cd jsoncpp
 mkdir build
 cd build
-cmake ..
+cmake -DCMAKE_BUILD_TYPE=release -DBUILD_STATIC_LIBS=ON -DBUILD_SHARED_LIBS=OFF -DARCHIVE_INSTALL_DIR=. -G "Visual Studio 14 2015 Win64" ..
 make
 #或者windows系统下
 msbuild /P:Configuration=Debug ALL_BUILD.vcxproj /P:Outdir="../../../lib/Debug"
