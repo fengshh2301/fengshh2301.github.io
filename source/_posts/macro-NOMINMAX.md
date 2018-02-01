@@ -5,6 +5,8 @@ tags: [max宏]
 categories: [贴士]
 ---
 
+使用max，遇到这么个问题<!-- more -->
+
 #### 错误输出
 
 ​    warning C4003: “max”宏的实参不足
