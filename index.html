@@ -374,20 +374,14 @@
 
       
         
-          
-            <h3 id="一、DLL文件"><a href="#一、DLL文件" class="headerlink" title="一、DLL文件"></a><strong>一、DLL文件</strong></h3><p>DLL(Dynamic Link Library)文件为<strong>动态链接库文件</strong>，又称“应用程序拓展”，是软件文件类型。在Windows中，许多应用程序并不是一个完整的可执行文件，它们被分割成一些相对独立的动态链接库，即DLL文件，放置于系统中。当我们执行某一个程序时，相应的DLL文件就会被调用。一个应用程序可使用多个DLL文件，一个DLL文件也可能被不同的应用程序使用，这样的DLL文件被称为共享DLL文件。</p>
-<p>DLL文件中存放的是各类程序的函数(子过程)实现过程，当程序需要调用函数时需要先载入DLL，然后取得函数的地址，最后进行调用。使用DLL文件的好处是程序不需要在运行之初加载所有代码，只有在程序需要某个函数的时候才从DLL中取出。另外，使用DLL文件还可以减小程序的体积。</p>
-<p>通过使用 DLL，程序可以实现模块化，由相对独立的组件组成。</p>
-<h3 id="二、调用方式"><a href="#二、调用方式" class="headerlink" title="二、调用方式"></a><strong>二、调用方式</strong></h3><h4 id="1、静态调用方式："><a href="#1、静态调用方式：" class="headerlink" title="1、静态调用方式："></a>1、静态调用方式：</h4><p>由编译系统完成对 DLL 的加载和应用程序结束时 DLL 卸载的编码（如还有其它程序使用该 DLL，则 Windows 对 DLL 的应用记录减1，直到所有相关程序都结束对该 DLL 的使用时才释放它，简单实用，但不够灵活，只能满足一般要求。</p>
-<p><strong>隐式链接</strong>：需要把产生动态连接库时产生的 .LIB 文件加入到应用程序的工程中，想使用 DLL 中的函数时，只须说明一下。隐式调用不需要调用 LoadLibrary() 和 FreeLibrary()。程序员在建立一个 DLL 文件时，链接程序会自动生成一个与之对应的 LIB 导入文件。该文件包含了每一个 DLL 导出函数的符号名和可选的标识号，但是并不含有实际的代码。LIB 文件作为 DLL 的替代文件被编译到应用程序项目中。</p>
-<p>当应用程序运行过程中需要加载 DLL 文件时，Windows 根据这些信息发现并加载 DLL，然后通过符号名或标识号实现对 DLL 函数的动态链接。所有被应用程序调用的 DLL 文件都会在应用程序 EXE　文件加载时被加载在到内存中。可执行程序链接到一个包含 DLL 输出函数信息的输入库文件(.LIB文件)。操作系统在加载使用可执行程序时加载 DLL。可执行程序直接通过函数名调用 DLL 的输出函数，调用方法和程序内部其 它的函数是一样的。</p>
-<h4 id="2、动态调用方式："><a href="#2、动态调用方式：" class="headerlink" title="2、动态调用方式："></a>2、动态调用方式：</h4><p>是由编程者用 API 函数加载和卸载 DLL 来达到调用 DLL 的目的，使用上较复杂，但能更加有效地使用内存，是编制大型应用程序时的重要方式。</p>
-<h5 id="显式链接："><a href="#显式链接：" class="headerlink" title="显式链接："></a><strong>显式链接</strong>：</h5><p>是指在应用程序中用 LoadLibrary 或 MFC 提供的 AfxLoadLibrary 显式的将自己所做的动态连接库调进来，动态连接库的文件名即是上面两个函数的参数，再用 GetProcAddress() 获取想要引入的函数。自此，你就可以象使用如同本应用程序自定义的函数一样来调用此引入函数了。在应用程序退出之前，应该用 FreeLibrary 或 MFC 提供的 AfxFreeLibrary 释放动态连接库。直接调用 Win32 的 LoadLibary 函数，并指定 DLL 的路径作为参数。LoadLibary 返回 HINSTANCE 参数，应用程序在调用 GetProcAddress 函数时使用这一参数。GetProcAddress 函数将符号名或标识号转换为 DLL 内部的地址。程序员可以决定 DLL 文件何时加载或不加载，显式链接在运行时决定加载哪个 DLL 文件。使用 DLL 的程序在使用之前必须加载（LoadLibrary）加载DLL从而得到一个DLL模块的句柄，然后调用 GetProcAddress 函数得到输出函数的指针，在退出之前必须卸载DLL(FreeLibrary)。</p>
-<p>可以看出，使用显式链接应用程序编译时不需要使用相应的Lib文件。</p>
-<h5 id="使用GetProcAddress："><a href="#使用GetProcAddress：" class="headerlink" title="使用GetProcAddress："></a><strong>使用GetProcAddress</strong>：</h5><p>a.利用MAKEINTRESOURCE()函数直接使用DLL中函数出现的顺序号，如将GetProcAddress(hDLL,”Min”)改为GetProcAddress(hDLL, MAKEINTRESOURCE(2))（函数Min()在DLL中的顺序号是2），这样调用DLL中的函数速度很快，但是要记住函数的使用序号，否则会发生错误。</p>
-<p>b.使用dumpbin /exports your.dll查看your.dll的导出函数。</p>
-
-          
+          <p>由于方便小巧，经常使用dll，这里总结一下dll的用法。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/02/02/windows-get-dll-proc-address/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

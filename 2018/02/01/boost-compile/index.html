@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="编译,boost," />
+  <meta name="keywords" content="boost,编译," />
 
 
 
@@ -80,7 +80,7 @@
 
 
 <meta name="description" content="需要使用boost库，这里记录下编译过程">
-<meta name="keywords" content="编译,boost">
+<meta name="keywords" content="boost,编译">
 <meta property="og:type" content="article">
 <meta property="og:title" content="boost编译">
 <meta property="og:url" content="http://yoursite.com/2018/02/01/boost-compile/index.html">
@@ -373,8 +373,8 @@
 
       
         <p>需要使用boost库，这里记录下编译过程<a id="more"></a>，顺便也比较下windows和linux下的差异。</p>
-<h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bootstrap.bat</span><br><span class="line"><span class="meta">#</span><span class="bash">32位</span></span><br><span class="line">bjam.exe stage --toolset=msvc-14.0 architecture=x86 address-model=32 link=static runtime-link=static</span><br><span class="line"><span class="meta">#</span><span class="bash">bjam.exe stage --toolset=msvc-14.0 architecture=x86 address-model=32 link=static runtime-link=shared</span></span><br><span class="line"><span class="meta">#</span><span class="bash">64位,此处注意运行bootstrap.bat的cmd必须是64位的</span></span><br><span class="line">bjam.exe stage --toolset=msvc-14.0 architecture=x86 address-model=64 link=static runtime-link=static</span><br><span class="line"><span class="meta">#</span><span class="bash">bjam.exe stage --toolset=msvc-14.0 architecture=x86 address-model=64 link=static runtime-link=shared</span></span><br></pre></td></tr></table></figure>
-<h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bootstrap.sh</span><br><span class="line"><span class="meta">#</span><span class="bash">32bit</span></span><br><span class="line">./b2 stage --toolset=gcc --stagedir="\home\user\workspace\boost" architecture=x86 address-model=32 link=static runtime-link=static threading=multi</span><br><span class="line"><span class="meta">#</span><span class="bash">./b2 stage --toolset=gcc --stagedir=<span class="string">"\home\user\workspace\boost"</span> architecture=x86 address-model=32 link=shared runtime-link=shared threading=multi --with-system --with-thread --with-date_time</span></span><br><span class="line"><span class="meta">#</span><span class="bash">64bit</span></span><br><span class="line">./b2 stage --toolset=gcc --stagedir="\home\user\workspace\boost" architecture=x86 address-model=64 link=static runtime-link=static threading=multi</span><br><span class="line"><span class="meta">#</span><span class="bash">./b2 stage --toolset=gcc --stagedir=<span class="string">"\home\user\workspace\boost"</span> architecture=x86 address-model=64 link=shared runtime-link=shared threading=multi --with-system --with-thread --with-date_time</span></span><br></pre></td></tr></table></figure>
+<h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bootstrap.bat</span><br><span class="line"><span class="meta">#</span>32位</span><br><span class="line">bjam.exe stage --toolset=msvc-14.0 architecture=x86 address-model=32 link=static runtime-link=static</span><br><span class="line"><span class="meta">#</span>bjam.exe stage --toolset=msvc-14.0 architecture=x86 address-model=32 link=static runtime-link=shared</span><br><span class="line"><span class="meta">#</span>64位,此处注意运行bootstrap.bat的cmd必须是64位的</span><br><span class="line">bjam.exe stage --toolset=msvc-14.0 architecture=x86 address-model=64 link=static runtime-link=static</span><br><span class="line"><span class="meta">#</span>bjam.exe stage --toolset=msvc-14.0 architecture=x86 address-model=64 link=static runtime-link=shared</span><br></pre></td></tr></table></figure>
+<h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bootstrap.sh</span><br><span class="line"><span class="meta">#</span>32bit</span><br><span class="line">./b2 stage --toolset=gcc --stagedir="\home\user\workspace\boost" architecture=x86 address-model=32 link=static runtime-link=static threading=multi</span><br><span class="line"><span class="meta">#</span>./b2 stage --toolset=gcc --stagedir="\home\user\workspace\boost" architecture=x86 address-model=32 link=shared runtime-link=shared threading=multi --with-system --with-thread --with-date_time</span><br><span class="line"><span class="meta">#</span>64bit</span><br><span class="line">./b2 stage --toolset=gcc --stagedir="\home\user\workspace\boost" architecture=x86 address-model=64 link=static runtime-link=static threading=multi</span><br><span class="line"><span class="meta">#</span>./b2 stage --toolset=gcc --stagedir="\home\user\workspace\boost" architecture=x86 address-model=64 link=shared runtime-link=shared threading=multi --with-system --with-thread --with-date_time</span><br></pre></td></tr></table></figure>
 <h3 id="bjam参数说明"><a href="#bjam参数说明" class="headerlink" title="bjam参数说明"></a>bjam参数说明</h3><ol>
 <li><h4 id="stage-install："><a href="#stage-install：" class="headerlink" title="stage/install："></a>stage/install：</h4></li>
 </ol>
@@ -433,9 +433,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/编译/" rel="tag"># 编译</a>
-          
             <a href="/tags/boost/" rel="tag"># boost</a>
+          
+            <a href="/tags/编译/" rel="tag"># 编译</a>
           
         </div>
       
