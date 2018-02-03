@@ -1,7 +1,7 @@
 ---
 title: centos时区时间同步
 date: 2018-01-26 21:49:27
-tags: [centos,时区]
+tags: [centos,时区同步]
 categories: [贴士]
 ---
 

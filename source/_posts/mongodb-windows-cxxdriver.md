@@ -1,7 +1,7 @@
 ---
 title: mongodb在windows上c++接口编译
 date: 2018-01-29 10:10:38
-tags: [mongodb,windows,cxxdriver]
+tags: [mongodb,windows]
 categories: [贴士]
 ---
 

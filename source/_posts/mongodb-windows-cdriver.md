@@ -1,7 +1,7 @@
 ---
 title: mongodb在windows上c接口编译
 date: 2018-01-29 10:10:33
-tags: [mongodb,windows,cdriver]
+tags: [mongodb,windows]
 categories: [贴士]
 ---
 

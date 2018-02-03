@@ -1,7 +1,7 @@
 ---
 title: boost编译
 date: 2018-02-01 22:54:07
-tags: [boost,编译]
+tags: [boost]
 categories: [贴士]
 ---
 

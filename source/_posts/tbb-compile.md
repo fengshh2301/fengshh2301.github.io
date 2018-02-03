@@ -1,7 +1,7 @@
 ---
 title: tbb编译
 date: 2018-01-30 00:25:41
-tags: [tbb,编译]
+tags: [tbb]
 categories: [贴士]
 ---
 

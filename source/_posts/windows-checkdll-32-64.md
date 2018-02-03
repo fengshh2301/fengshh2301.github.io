@@ -1,7 +1,7 @@
 ---
 title: windows检查dll是否64位库
 date: 2018-02-01 22:31:44
-tags: [windows,dll,lib,dumpbin]
+tags: [windows,msvc编译,dumpbin]
 categories: [贴士]
 ---
 

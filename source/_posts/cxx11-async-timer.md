@@ -1,7 +1,7 @@
 ---
 title: c++11异步定时器
 date: 2018-01-29 14:09:09
-tags: [c++11,异步,timer]
+tags: [c++11,异步定时器]
 categories : [贴士]
 ---
 
