@@ -64,7 +64,7 @@ stage时使用stagedir，install时使用prefix，表示编译生成文件的路
 
 动态还是静态链接C/C++运行时库。同样有shared和static两种方式，这样runtime-link和link一共可以产生4种组合方式，各人可以根据自己的需要选择编译
 
-GCC下，在生成动态库（–link=shared）时，就不允许进行静态链接到C运行库（或C++标准库）
+GCC下，在生成动态库（`--link=shared`）时，就不允许进行静态链接到C运行库（或C++标准库）
 
 8. #### threading
 
@@ -76,5 +76,5 @@ GCC下，在生成动态库（–link=shared）时，就不允许进行静态链
 
 10. #### without/with：
 
-选择不编译/编译哪些库。这里我们指定要编译哪些库，就使用了witth，注意写法：--with-thread --with-date_time，同样，如果不想编译哪些库，可以类似写法--without-thread
+选择不编译/编译哪些库。这里我们指定要编译哪些库，就使用了witth，注意写法：`--with-thread --with-date_time`，同样，如果不想编译哪些库，可以类似写法`--without-thread`
 

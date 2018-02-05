@@ -16,31 +16,23 @@ CST：中国沿海时间(北京时间)(China Standard Time UTC+8:00)
 
 ### 1.修改时区文件
 
-vi /etc/sysconfig/clock
+`vi /etc/sysconfig/clock`
 ZONE="Asia/Shanghai"
 UTC=false                                                        #设置为false，硬件时钟不于utc时间一致
 ARC=false
 
 ### 2.配置时区
 
+```shell
 ln -sf /usr/share/zoneinfo/Asia/Shanghai    /etc/localtime       #linux的时区设置为上海
+```
 
 ### 3.对准时间，需要先安装ntp服务器 
 
+```shell
 yum install ntp
-
 rpm -q ntp
-
 yum -y install ntp
+ntpdate pool.ntp.org        
+```
 
-ntpdate pool.ntp.org                    
-
-### 4.设置硬件时间和系统时间一致并校准
-
-/sbin/hwclock --systohc  
-​                                    
-
-### 5.设置系统开机自动启动并启动服务
-
-systemctl enable ntpd
-systemctl start ntpd

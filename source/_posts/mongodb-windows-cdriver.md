@@ -31,6 +31,7 @@ msbuild.exe /p:Configuration=Release INSTALL.vcxproj
 
 ### 实际：
 
+```shell
 cd mongo-c-driver-1.8.1\src\libbson
 cmake -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=E:\workspace\mongo-c-driver -DCMAKE_BUILD_TYPE=Release
 msbuild.exe /p:Configuration=Release ALL_BUILD.vcxproj
@@ -41,3 +42,5 @@ cmake -G "Visual Studio 14 2015 Win64" -DENABLE_SSL=WINDOWS -DENABLE_SASL=SSPI -
 
 msbuild.exe /p:Configuration=Release ALL_BUILD.vcxproj
 msbuild.exe /p:Configuration=Release INSTALL.vcxproj
+```
+

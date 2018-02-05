@@ -19,8 +19,13 @@ error: collect2: error: ld returned 1 exit status
 
 进入CentOS系统的终端，依次执行以下命令，即可解决。
 
-su
+```shell
+sudo yum install mesa-libGL-devel mesa-libGLU-devel
+```
 
-yum install mesa-libGL-devel mesa-libGLU-devel
+这个可选:
 
-这个可选: yum install freeglut-devel   
+```shell
+sudo yum install freeglut-devel   
+```
+
