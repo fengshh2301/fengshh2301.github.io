@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jason&#39;s Blog">
 <meta property="og:description" content="安装好centos之后，总会发现机器时间与真实时间相差8小时。这其实是时差问题导致。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-03T07:19:08.576Z">
+<meta property="og:updated_time" content="2018-02-07T15:49:19.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos时区时间同步">
 <meta name="twitter:description" content="安装好centos之后，总会发现机器时间与真实时间相差8小时。这其实是时差问题导致。">
@@ -376,14 +376,9 @@
 <p>GPS 系统中有两种时间区分，一为UTC，另一为LT（地方时）两者的区别为时区不同，UTC就是0时区的时间，地方时为本地时间，如北京为早上八点（东八区），UTC时间就为零点，时间比北京时晚八小时，以此计算即可</p>
 <p>UTC：世界协调时间(Universal Time Coordinated,UTC)<br>CST：中国沿海时间(北京时间)(China Standard Time UTC+8:00) </p>
 <p>在安装完centos系统后发现时间与现在时间相差8小时，这是由于我们在安装系统的时选择的时区是上海，而centos默认bios时间是utc时间，所以时间相差了8小时。这个时候的bios的时间和系统的时间是不一致的，一个代表 utc 时间，一个代表cst（＋8时区），即上海时间。</p>
-<h3 id="1-修改时区文件"><a href="#1-修改时区文件" class="headerlink" title="1.修改时区文件"></a>1.修改时区文件</h3><p>vi /etc/sysconfig/clock<br>ZONE=”Asia/Shanghai”<br>UTC=false                                                        #设置为false，硬件时钟不于utc时间一致<br>ARC=false</p>
-<h3 id="2-配置时区"><a href="#2-配置时区" class="headerlink" title="2.配置时区"></a>2.配置时区</h3><p>ln -sf /usr/share/zoneinfo/Asia/Shanghai    /etc/localtime       #linux的时区设置为上海</p>
-<h3 id="3-对准时间，需要先安装ntp服务器"><a href="#3-对准时间，需要先安装ntp服务器" class="headerlink" title="3.对准时间，需要先安装ntp服务器"></a>3.对准时间，需要先安装ntp服务器</h3><p>yum install ntp</p>
-<p>rpm -q ntp</p>
-<p>yum -y install ntp</p>
-<p>ntpdate pool.ntp.org                    </p>
-<h3 id="4-设置硬件时间和系统时间一致并校准"><a href="#4-设置硬件时间和系统时间一致并校准" class="headerlink" title="4.设置硬件时间和系统时间一致并校准"></a>4.设置硬件时间和系统时间一致并校准</h3><p>/sbin/hwclock –systohc<br>​                                    </p>
-<h3 id="5-设置系统开机自动启动并启动服务"><a href="#5-设置系统开机自动启动并启动服务" class="headerlink" title="5.设置系统开机自动启动并启动服务"></a>5.设置系统开机自动启动并启动服务</h3><p>systemctl enable ntpd<br>systemctl start ntpd</p>
+<h3 id="1-修改时区文件"><a href="#1-修改时区文件" class="headerlink" title="1.修改时区文件"></a>1.修改时区文件</h3><p><code>vi /etc/sysconfig/clock</code><br>ZONE=”Asia/Shanghai”<br>UTC=false                                                        #设置为false，硬件时钟不于utc时间一致<br>ARC=false</p>
+<h3 id="2-配置时区"><a href="#2-配置时区" class="headerlink" title="2.配置时区"></a>2.配置时区</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -sf /usr/share/zoneinfo/Asia/Shanghai    /etc/localtime       #linux的时区设置为上海</span><br></pre></td></tr></table></figure>
+<h3 id="3-对准时间，需要先安装ntp服务器"><a href="#3-对准时间，需要先安装ntp服务器" class="headerlink" title="3.对准时间，需要先安装ntp服务器"></a>3.对准时间，需要先安装ntp服务器</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum install ntp</span><br><span class="line">rpm -q ntp</span><br><span class="line">yum -y install ntp</span><br><span class="line">ntpdate pool.ntp.org</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -516,7 +511,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -571,7 +566,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-修改时区文件"><span class="nav-number">1.</span> <span class="nav-text">1.修改时区文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-配置时区"><span class="nav-number">2.</span> <span class="nav-text">2.配置时区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-对准时间，需要先安装ntp服务器"><span class="nav-number">3.</span> <span class="nav-text">3.对准时间，需要先安装ntp服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-设置硬件时间和系统时间一致并校准"><span class="nav-number">4.</span> <span class="nav-text">4.设置硬件时间和系统时间一致并校准</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-设置系统开机自动启动并启动服务"><span class="nav-number">5.</span> <span class="nav-text">5.设置系统开机自动启动并启动服务</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-修改时区文件"><span class="nav-number">1.</span> <span class="nav-text">1.修改时区文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-配置时区"><span class="nav-number">2.</span> <span class="nav-text">2.配置时区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-对准时间，需要先安装ntp服务器"><span class="nav-number">3.</span> <span class="nav-text">3.对准时间，需要先安装ntp服务器</span></a></li></ol></div>
             
 
           </div>

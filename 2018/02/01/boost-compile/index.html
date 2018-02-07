@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jason&#39;s Blog">
 <meta property="og:description" content="需要使用boost库，这里记录下编译过程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-03T07:18:41.618Z">
+<meta property="og:updated_time" content="2018-02-07T15:49:19.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="boost编译">
 <meta name="twitter:description" content="需要使用boost库，这里记录下编译过程">
@@ -403,7 +403,7 @@
 <li><h4 id="runtime-link"><a href="#runtime-link" class="headerlink" title="runtime-link"></a>runtime-link</h4></li>
 </ol>
 <p>动态还是静态链接C/C++运行时库。同样有shared和static两种方式，这样runtime-link和link一共可以产生4种组合方式，各人可以根据自己的需要选择编译</p>
-<p>GCC下，在生成动态库（–link=shared）时，就不允许进行静态链接到C运行库（或C++标准库）</p>
+<p>GCC下，在生成动态库（<code>--link=shared</code>）时，就不允许进行静态链接到C运行库（或C++标准库）</p>
 <ol>
 <li><h4 id="threading"><a href="#threading" class="headerlink" title="threading"></a>threading</h4></li>
 </ol>
@@ -415,7 +415,7 @@
 <ol>
 <li><h4 id="without-with："><a href="#without-with：" class="headerlink" title="without/with："></a>without/with：</h4></li>
 </ol>
-<p>选择不编译/编译哪些库。这里我们指定要编译哪些库，就使用了witth，注意写法：–with-thread –with-date_time，同样，如果不想编译哪些库，可以类似写法–without-thread</p>
+<p>选择不编译/编译哪些库。这里我们指定要编译哪些库，就使用了witth，注意写法：<code>--with-thread --with-date_time</code>，同样，如果不想编译哪些库，可以类似写法<code>--without-thread</code></p>
 
       
     </div>
@@ -546,7 +546,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jason&#39;s Blog">
 <meta property="og:description" content="mongodb是个好东西，如果要在c代码中使用，需要编译出c接口。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-03T07:21:11.313Z">
+<meta property="og:updated_time" content="2018-02-07T15:49:19.536Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongodb在windows上c接口编译">
 <meta name="twitter:description" content="mongodb是个好东西，如果要在c代码中使用，需要编译出c接口。">
@@ -377,9 +377,7 @@
 <h3 id="原文："><a href="#原文：" class="headerlink" title="原文："></a>原文：</h3><p>cd mongo-c-driver-1.8.1\src\libbson<br>cmake -G “Visual Studio 14 2015 Win64” \<br>  “-DCMAKE_INSTALL_PREFIX=C:\mongo-c-driver” \<br>  “-DCMAKE_BUILD_TYPE=Release” # Defaults to debug builds<br>msbuild.exe /p:Configuration=Release ALL_BUILD.vcxproj<br>msbuild.exe /p:Configuration=Release INSTALL.vcxproj</p>
 <p>cd mongo-c-driver-1.8.1<br>cmake -G “Visual Studio 14 2015 Win64” \<br>  “-DENABLE_SSL=WINDOWS” \<br>  “-DENABLE_SASL=SSPI” \<br>  “-DCMAKE_INSTALL_PREFIX=C:\mongo-c-driver” \<br>  “-DCMAKE_PREFIX_PATH=C:\mongo-c-driver” \<br>  “-DCMAKE_BUILD_TYPE=Release” # Defaults to debug builds</p>
 <p>msbuild.exe /p:Configuration=Release ALL_BUILD.vcxproj<br>msbuild.exe /p:Configuration=Release INSTALL.vcxproj</p>
-<h3 id="实际："><a href="#实际：" class="headerlink" title="实际："></a>实际：</h3><p>cd mongo-c-driver-1.8.1\src\libbson<br>cmake -G “Visual Studio 14 2015 Win64” -DCMAKE_INSTALL_PREFIX=E:\workspace\mongo-c-driver -DCMAKE_BUILD_TYPE=Release<br>msbuild.exe /p:Configuration=Release ALL_BUILD.vcxproj<br>msbuild.exe /p:Configuration=Release INSTALL.vcxproj</p>
-<p>cd mongo-c-driver-1.8.1<br>cmake -G “Visual Studio 14 2015 Win64” -DENABLE_SSL=WINDOWS -DENABLE_SASL=SSPI -DCMAKE_INSTALL_PREFIX=E:\workspace\mongo-c-driver -DCMAKE_PREFIX_PATH=E:\workspace\mongo-c-driver -DCMAKE_BUILD_TYPE=Release</p>
-<p>msbuild.exe /p:Configuration=Release ALL_BUILD.vcxproj<br>msbuild.exe /p:Configuration=Release INSTALL.vcxproj</p>
+<h3 id="实际："><a href="#实际：" class="headerlink" title="实际："></a>实际：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cd mongo-c-driver-1.8.1\src\libbson</span><br><span class="line">cmake -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=E:\workspace\mongo-c-driver -DCMAKE_BUILD_TYPE=Release</span><br><span class="line">msbuild.exe /p:Configuration=Release ALL_BUILD.vcxproj</span><br><span class="line">msbuild.exe /p:Configuration=Release INSTALL.vcxproj</span><br><span class="line"></span><br><span class="line">cd mongo-c-driver-1.8.1</span><br><span class="line">cmake -G "Visual Studio 14 2015 Win64" -DENABLE_SSL=WINDOWS -DENABLE_SASL=SSPI -DCMAKE_INSTALL_PREFIX=E:\workspace\mongo-c-driver -DCMAKE_PREFIX_PATH=E:\workspace\mongo-c-driver -DCMAKE_BUILD_TYPE=Release</span><br><span class="line"></span><br><span class="line">msbuild.exe /p:Configuration=Release ALL_BUILD.vcxproj</span><br><span class="line">msbuild.exe /p:Configuration=Release INSTALL.vcxproj</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -512,7 +510,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
