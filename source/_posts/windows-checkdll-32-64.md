@@ -7,7 +7,7 @@ categories: [贴士]
 
 windows下有时候需要检查dll和lib是32位还是64位<!-- more -->，这里有一个简单工具，在VSdevcmd
 
-下可以使用。
+下使用。
 
 工具：dumpbin.exe 
 依赖：link.exe, mspdb100.dll

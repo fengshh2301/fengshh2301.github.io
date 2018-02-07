@@ -1,7 +1,7 @@
 ---
 title: mongodb数据备份恢复
 date: 2018-02-03 15:39:33
-tags: [mongodb,dump]
+tags: [mongodb,备份]
 categories: [贴士]
 ---
 

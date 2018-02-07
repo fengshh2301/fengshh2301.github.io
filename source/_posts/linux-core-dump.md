@@ -1,7 +1,7 @@
 ---
 title: linux下dump生成core文件
 date: 2018-02-07 23:34:52
-tags: [linux,dump]
+tags: [linux,调试]
 ---
 
 Linux下调试C或c++程序时，出现崩溃，<!-- more -->ls下当前目录，有时会发现没有生成core文件。这是因为系统没有打开生成core dump的设置。做个简单记录。
