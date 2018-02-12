@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="centos,mongodb," />
+  <meta name="keywords" content="centos,����," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="由于需要跨平台使用mongodb，需要编译官方的cxx driver">
-<meta name="keywords" content="centos,mongodb">
+<meta name="description" content="centos����Ҫ���ض��ļ����öϵ�">
+<meta name="keywords" content="centos,����">
 <meta property="og:type" content="article">
-<meta property="og:title" content="centos下编译mongo_cxx_driver">
-<meta property="og:url" content="http://yoursite.com/2018/02/07/centos-mongo-cxx-driver/index.html">
+<meta property="og:title" content="centos��gdb���Ա���no symbol table">
+<meta property="og:url" content="http://yoursite.com/2018/02/12/centos-no-symboltable/index.html">
 <meta property="og:site_name" content="Jason&#39;s Blog">
-<meta property="og:description" content="由于需要跨平台使用mongodb，需要编译官方的cxx driver">
+<meta property="og:description" content="centos����Ҫ���ض��ļ����öϵ�">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-07T15:32:16.407Z">
+<meta property="og:updated_time" content="2018-02-12T09:44:03.408Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="centos下编译mongo_cxx_driver">
-<meta name="twitter:description" content="由于需要跨平台使用mongodb，需要编译官方的cxx driver">
+<meta name="twitter:title" content="centos��gdb���Ա���no symbol table">
+<meta name="twitter:description" content="centos����Ҫ���ض��ļ����öϵ�">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/07/centos-mongo-cxx-driver/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/12/centos-no-symboltable/"/>
 
 
 
 
 
-  <title>centos下编译mongo_cxx_driver | Jason's Blog</title>
+  <title>centos��gdb���Ա���no symbol table | Jason's Blog</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/07/centos-mongo-cxx-driver/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/12/centos-no-symboltable/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jason Feng">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">centos下编译mongo_cxx_driver</h1>
+          <h1 class="post-title" itemprop="name headline">centos��gdb���Ա���no symbol table</h1>
         
 
         <div class="post-meta">
@@ -302,8 +302,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T23:21:56+08:00">
-                2018-02-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-12T16:48:38+08:00">
+                2018-02-12
               </time>
             
 
@@ -325,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/贴士/" itemprop="url" rel="index">
-                    <span itemprop="name">贴士</span>
+                  <a href="/categories/��ʿ/" itemprop="url" rel="index">
+                    <span itemprop="name">��ʿ</span>
                   </a>
                 </span>
 
@@ -343,8 +343,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/02/07/centos-mongo-cxx-driver/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/02/07/centos-mongo-cxx-driver/" itemprop="commentCount"></span>
+                <a href="/2018/02/12/centos-no-symboltable/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/02/12/centos-no-symboltable/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -372,17 +372,15 @@
       
 
       
-        <p>由于需要跨平台使用mongodb，需要编译官方的cxx driver<a id="more"></a> ，记录下centos7下的编译过程。</p>
-<p>编译libbson</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/mongodb/libbson.git</span><br><span class="line">cd libbson/</span><br><span class="line">git checkout -b 1.8.2 1.8.2</span><br><span class="line">cmake .</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
-<p>编译mongo c driver</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/mongodb/mongo-c-driver.git</span><br><span class="line">cd mongo-c-driver/build</span><br><span class="line">git checkout -b 1.8.2 1.8.2</span><br><span class="line">./autogen.sh --with-libbson=bundled --enable-static</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
-<p>编译mongo cxx driver</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/mongodb/mongo-cxx-driver.git</span><br><span class="line">cd mongo-cxx-driver/</span><br><span class="line">git checkout -b r3.2.0-rc1 r3.2.0-rc1</span><br><span class="line">cd build/</span><br><span class="line"><span class="meta">#</span>cmake -DCMAKE_BUILD_TYPE=Release BUILD_STATIC_LIBS=ON DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=/usr/local ..</span><br><span class="line">cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..</span><br><span class="line">sudo make EP_mnmlstc_core</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
-<p>后记</p>
-<p>这里还有一点需要说明，原本是希望使用静态库的，可是应用程序在链接mongo-cxx-driver静态库时，总是报：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">undefined reference to `bsoncxx::v_noabi::builder::core::key_view(core::v1::basic_string_view&lt;<span class="keyword">char</span>, <span class="built_in">std</span>::char_traits&lt;<span class="keyword">char</span>&gt; &gt;)'</span><br></pre></td></tr></table></figure>
-<p>暂时还没有找到原因，探索中。。。</p>
+        <p>centos����Ҫ���ض��ļ����öϵ�<a id="more"></a>������gdb��<code>break filename:linenum</code>ʱ������</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">No source file</span><br><span class="line"><span class="meta">#</span>����</span><br><span class="line">No symbol table is loaded.  Use the "file" command.</span><br></pre></td></tr></table></figure>
+<p>����������ã�</p>
+<p>1.makefile�����ã�</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CFLAGS = -g #c����</span><br><span class="line">CPPFLAGS = -g #cpp����</span><br></pre></td></tr></table></figure>
+<p>cmake���ã�</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set(CMAKE_C_FLAGS_DEBUG "$&#123;CMAKE_CXX_FLAGS_DEBUG&#125; -O0 -Wall -g -ggdb")</span><br><span class="line">set(CMAKE_CXX_FLAGS_DEBUG "$&#123;CMAKE_CXX_FLAGS_DEBUG&#125; -O0 -Wall -g -ggdb")</span><br></pre></td></tr></table></figure>
+<p>2.��ʱcmakeʹ��debugģʽ������</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_BUILD_TYPE=Debug .</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -402,7 +400,7 @@
           
             <a href="/tags/centos/" rel="tag"># centos</a>
           
-            <a href="/tags/mongodb/" rel="tag"># mongodb</a>
+            <a href="/tags/����/" rel="tag"># ����</a>
           
         </div>
       
@@ -415,8 +413,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/03/mongodb-dump/" rel="next" title="mongodb数据备份恢复">
-                <i class="fa fa-chevron-left"></i> mongodb数据备份恢复
+              <a href="/2018/02/12/centos-debuginfo-install/" rel="next" title="centos下gdb调试出现Missing separate debuginfos问题">
+                <i class="fa fa-chevron-left"></i> centos下gdb调试出现Missing separate debuginfos问题
               </a>
             
           </div>
@@ -424,10 +422,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/07/linux-core-dump/" rel="prev" title="linux下dump生成core文件">
-                linux下dump生成core文件 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -458,8 +452,8 @@
 
   
     <div class="comments" id="comments">
-      <div class="ds-thread" data-thread-key="2018/02/07/centos-mongo-cxx-driver/"
-           data-title="centos下编译mongo_cxx_driver" data-url="http://yoursite.com/2018/02/07/centos-mongo-cxx-driver/">
+      <div class="ds-thread" data-thread-key="2018/02/12/centos-no-symboltable/"
+           data-title="centos��gdb���Ա���no symbol table" data-url="http://yoursite.com/2018/02/12/centos-no-symboltable/">
       </div>
     </div>
 
