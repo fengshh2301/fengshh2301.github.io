@@ -1,5 +1,5 @@
 ---
-title: centos下gdb调试报: no source file或者no symbol table
+title: centos下gdb调试报: no symbol table
 date: 2018-02-12 16:48:38
 tags: [centos,调试]
 categories: [贴士]
