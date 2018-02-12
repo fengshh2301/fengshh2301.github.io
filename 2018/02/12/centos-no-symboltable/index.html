@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="centos,����," />
+  <meta name="keywords" content="centos,调试," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="centos����Ҫ���ض��ļ����öϵ�">
-<meta name="keywords" content="centos,����">
+<meta name="description" content="centos下想要给特定文件设置断点">
+<meta name="keywords" content="centos,调试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="centos��gdb���Ա���no symbol table">
+<meta property="og:title" content="centos下gdb调试报no symbol table">
 <meta property="og:url" content="http://yoursite.com/2018/02/12/centos-no-symboltable/index.html">
 <meta property="og:site_name" content="Jason&#39;s Blog">
-<meta property="og:description" content="centos����Ҫ���ض��ļ����öϵ�">
+<meta property="og:description" content="centos下想要给特定文件设置断点">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-12T09:44:03.408Z">
+<meta property="og:updated_time" content="2018-02-12T09:50:45.027Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="centos��gdb���Ա���no symbol table">
-<meta name="twitter:description" content="centos����Ҫ���ض��ļ����öϵ�">
+<meta name="twitter:title" content="centos下gdb调试报no symbol table">
+<meta name="twitter:description" content="centos下想要给特定文件设置断点">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>centos��gdb���Ա���no symbol table | Jason's Blog</title>
+  <title>centos下gdb调试报no symbol table | Jason's Blog</title>
   
 
 
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">centos��gdb���Ա���no symbol table</h1>
+          <h1 class="post-title" itemprop="name headline">centos下gdb调试报no symbol table</h1>
         
 
         <div class="post-meta">
@@ -302,7 +302,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-12T16:48:38+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-12T17:49:42+08:00">
                 2018-02-12
               </time>
             
@@ -325,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/��ʿ/" itemprop="url" rel="index">
-                    <span itemprop="name">��ʿ</span>
+                  <a href="/categories/贴士/" itemprop="url" rel="index">
+                    <span itemprop="name">贴士</span>
                   </a>
                 </span>
 
@@ -372,16 +372,15 @@
       
 
       
-        <p>centos����Ҫ���ض��ļ����öϵ�<a id="more"></a>������gdb��<code>break filename:linenum</code>ʱ������</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">No source file</span><br><span class="line"><span class="meta">#</span>����</span><br><span class="line">No symbol table is loaded.  Use the "file" command.</span><br></pre></td></tr></table></figure>
-<p>����������ã�</p>
-<p>1.makefile�����ã�</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CFLAGS = -g #c����</span><br><span class="line">CPPFLAGS = -g #cpp����</span><br></pre></td></tr></table></figure>
-<p>cmake���ã�</p>
+        <p>centos下想要给特定文件设置断点<a id="more"></a>，但是gdb中<code>break filename:linenum</code>时，报错：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">No source file</span><br><span class="line"><span class="meta">#</span>或者</span><br><span class="line">No symbol table is loaded.  Use the "file" command.</span><br></pre></td></tr></table></figure>
+<p>检查两个设置：</p>
+<p>1.makefile中设置：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CFLAGS = -g #c代码</span><br><span class="line">CPPFLAGS = -g #cpp代码</span><br></pre></td></tr></table></figure>
+<p>cmake设置：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set(CMAKE_C_FLAGS_DEBUG "$&#123;CMAKE_CXX_FLAGS_DEBUG&#125; -O0 -Wall -g -ggdb")</span><br><span class="line">set(CMAKE_CXX_FLAGS_DEBUG "$&#123;CMAKE_CXX_FLAGS_DEBUG&#125; -O0 -Wall -g -ggdb")</span><br></pre></td></tr></table></figure>
-<p>2.��ʱcmakeʹ��debugģʽ������</p>
+<p>2.启动时cmake使用debug模式构建：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_BUILD_TYPE=Debug .</span><br></pre></td></tr></table></figure>
-
       
     </div>
     
@@ -400,7 +399,7 @@
           
             <a href="/tags/centos/" rel="tag"># centos</a>
           
-            <a href="/tags/����/" rel="tag"># ����</a>
+            <a href="/tags/调试/" rel="tag"># 调试</a>
           
         </div>
       
@@ -453,7 +452,7 @@
   
     <div class="comments" id="comments">
       <div class="ds-thread" data-thread-key="2018/02/12/centos-no-symboltable/"
-           data-title="centos��gdb���Ա���no symbol table" data-url="http://yoursite.com/2018/02/12/centos-no-symboltable/">
+           data-title="centos下gdb调试报no symbol table" data-url="http://yoursite.com/2018/02/12/centos-no-symboltable/">
       </div>
     </div>
 
@@ -511,7 +510,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -522,7 +521,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
