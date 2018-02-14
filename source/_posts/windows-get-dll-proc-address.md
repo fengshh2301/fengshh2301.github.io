@@ -1,7 +1,7 @@
 ---
 title: windows下调用dll的几种方法
 date: 2018-02-02 21:17:33
-tags: [windows,msvc编译]
+tags: [windows,编译]
 categories: [贴士]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: windows下判断32位和64位程序的编译
 date: 2018-02-02 20:51:42
-tags: [windows, msvc编译]
+tags: [windows, 编译]
 categories: [贴士]
 ---
 
