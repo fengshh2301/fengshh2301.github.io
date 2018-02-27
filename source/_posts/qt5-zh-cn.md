@@ -1,8 +1,8 @@
 ---
 title: QT中文显示乱码问题
 date: 2018-02-27 10:01:15
-tags: [qt5,中文乱码]
-categories: [qt5]
+tags: [qt,中文乱码]
+categories: [qt]
 ---
 
 安装好qt5后，Qt中文显示，会出现乱码<!-- more -->。
