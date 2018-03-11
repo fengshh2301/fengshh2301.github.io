@@ -1,5 +1,5 @@
 ---
-title: qt_command_macro_pro
+title: qt常用命令宏以及pro文件格式
 date: 2018-02-27 13:43:34
 tags: [qt]
 categories: [qt]
