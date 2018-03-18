@@ -33,6 +33,9 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai    /etc/localtime       #linux的时区
 yum install ntp
 rpm -q ntp
 yum -y install ntp
-ntpdate pool.ntp.org        
+ntpdate pool.ntp.org   
+
+systemctl enable ntpd.service
+systemctl start ntpd.service
 ```
 
