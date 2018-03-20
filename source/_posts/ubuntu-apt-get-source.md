@@ -1,5 +1,5 @@
 ---
-title: ubuntu apt-get install 安装软件出现“E: Package *** has no installation candidate” 错误的解决方案
+title: 安装软件出现E: Package *** has no installation candidate
 date: 2018-03-20 12:53:03
 tags: [ubuntu,安装]
 categories: [贴士]
