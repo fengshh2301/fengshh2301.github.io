@@ -1,5 +1,5 @@
 ---
-title: 安装软件出现E: Package *** has no installation candidate
+title: apt-get安装软件
 date: 2018-03-20 12:53:03
 tags: [ubuntu,安装]
 categories: [贴士]
