@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="交易预测," />
+  <meta name="keywords" content="ubuntu,安装," />
 
 
 
@@ -79,15 +79,18 @@
 
 
 
-<meta name="keywords" content="交易预测">
+<meta name="description" content="在ubuntu上使用apt-get安裝软件包时">
+<meta name="keywords" content="ubuntu,安装">
 <meta property="og:type" content="article">
-<meta property="og:title" content="预处理">
-<meta property="og:url" content="http://yoursite.com/2018/01/25/trade-forcast-2-preprocess/index.html">
+<meta property="og:title" content="apt-get安装软件">
+<meta property="og:url" content="http://yoursite.com/2018/03/20/ubuntu-apt-get-source/index.html">
 <meta property="og:site_name" content="Jason&#39;s Blog">
+<meta property="og:description" content="在ubuntu上使用apt-get安裝软件包时">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-25T13:55:52.629Z">
+<meta property="og:updated_time" content="2018-03-20T05:16:57.148Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="预处理">
+<meta name="twitter:title" content="apt-get安装软件">
+<meta name="twitter:description" content="在ubuntu上使用apt-get安裝软件包时">
 
 
 
@@ -117,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/25/trade-forcast-2-preprocess/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/20/ubuntu-apt-get-source/"/>
 
 
 
 
 
-  <title>预处理 | Jason's Blog</title>
+  <title>apt-get安装软件 | Jason's Blog</title>
   
 
 
@@ -270,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/25/trade-forcast-2-preprocess/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/20/ubuntu-apt-get-source/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jason Feng">
@@ -287,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">预处理</h1>
+          <h1 class="post-title" itemprop="name headline">apt-get安装软件</h1>
         
 
         <div class="post-meta">
@@ -299,8 +302,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T21:27:47+08:00">
-                2018-01-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-20T12:53:03+08:00">
+                2018-03-20
               </time>
             
 
@@ -322,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/交易系统/" itemprop="url" rel="index">
-                    <span itemprop="name">交易系统</span>
+                  <a href="/categories/贴士/" itemprop="url" rel="index">
+                    <span itemprop="name">贴士</span>
                   </a>
                 </span>
 
@@ -340,8 +343,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/25/trade-forcast-2-preprocess/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/25/trade-forcast-2-preprocess/" itemprop="commentCount"></span>
+                <a href="/2018/03/20/ubuntu-apt-get-source/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/03/20/ubuntu-apt-get-source/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -369,7 +372,26 @@
       
 
       
-        <a id="more"></a>
+        <p>在ubuntu上使用apt-get安裝软件包时<a id="more"></a>，经常出现：</p>
+<blockquote>
+<p>Reading package lists… Done<br>Building dependency tree<br>Reading state information… Done<br>Package vim is not available, but is referred to by another package.<br>This may mean that the package is missing, has been obsoleted, or<br>is only available from another source<br>E: Package vim has no installation candidate</p>
+</blockquote>
+<p>这里有两种情况：</p>
+<h4 id="apt-get源没有更新"><a href="#apt-get源没有更新" class="headerlink" title="apt-get源没有更新"></a>apt-get源没有更新</h4><p>这时执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade #可选</span><br></pre></td></tr></table></figure>
+<p>一般就可以了</p>
+<h4 id="apt-get源已经过期"><a href="#apt-get源已经过期" class="headerlink" title="apt-get源已经过期"></a>apt-get源已经过期</h4><p>原因是有些发行版已经太老，官方不再维护，官方源甚至很多第三方源都不再维护了。为此，ubuntu提供了old-release的方案，在<code>/etc/apt/sources.list</code>文件中添加如下地址：</p>
+<blockquote>
+<p><strong>deb <a href="http://old-releases.ubuntu.com/ubuntu" target="_blank" rel="noopener">http://old-releases.ubuntu.com/ubuntu</a> lucid main restricted universe multiverse   </strong><br><strong>deb <a href="http://old-releases.ubuntu.com/ubuntu" target="_blank" rel="noopener">http://old-releases.ubuntu.com/ubuntu</a> lucid-security main restricted universe multiverse   </strong><br><strong>deb <a href="http://old-releases.ubuntu.com/ubuntu" target="_blank" rel="noopener">http://old-releases.ubuntu.com/ubuntu</a> lucid-updates main restricted universe multiverse   </strong><br><strong>deb <a href="http://old-releases.ubuntu.com/ubuntu" target="_blank" rel="noopener">http://old-releases.ubuntu.com/ubuntu</a> lucid-proposed main restricted universe multiverse   </strong><br><strong>deb <a href="http://old-releases.ubuntu.com/ubuntu" target="_blank" rel="noopener">http://old-releases.ubuntu.com/ubuntu</a> lucid-backports main restricted universe multiverse   </strong><br><strong>deb-src <a href="http://old-releases.ubuntu.com/ubuntu" target="_blank" rel="noopener">http://old-releases.ubuntu.com/ubuntu</a> lucid main restricted universe multiverse   </strong><br><strong>deb-src <a href="http://old-releases.ubuntu.com/ubuntu" target="_blank" rel="noopener">http://old-releases.ubuntu.com/ubuntu</a> lucid-security main restricted universe multiverse   </strong><br><strong>deb-src <a href="http://old-releases.ubuntu.com/ubuntu" target="_blank" rel="noopener">http://old-releases.ubuntu.com/ubuntu</a> lucid-updates main restricted universe multiverse   </strong><br><strong>deb-src <a href="http://old-releases.ubuntu.com/ubuntu" target="_blank" rel="noopener">http://old-releases.ubuntu.com/ubuntu</a> lucid-proposed main restricted universe multiverse   </strong><br><strong>deb-src <a href="http://old-releases.ubuntu.com/ubuntu" target="_blank" rel="noopener">http://old-releases.ubuntu.com/ubuntu</a> lucid-backports main restricted universe multiverse  </strong></p>
+</blockquote>
+<p>之后执行update就好了。</p>
+<p>当然也可以使用阿里云的源：</p>
+<blockquote>
+<p>deb <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="noopener">http://mirrors.aliyun.com/ubuntu/</a> trusty main restricted universe multiverse<br>deb <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="noopener">http://mirrors.aliyun.com/ubuntu/</a> trusty-security main restricted universe multiverse<br>deb <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="noopener">http://mirrors.aliyun.com/ubuntu/</a> trusty-updates main restricted universe multiverse<br>deb <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="noopener">http://mirrors.aliyun.com/ubuntu/</a> trusty-proposed main restricted universe multiverse<br>deb <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="noopener">http://mirrors.aliyun.com/ubuntu/</a> trusty-backports main restricted universe multiverse<br>deb-src <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="noopener">http://mirrors.aliyun.com/ubuntu/</a> trusty main restricted universe multiverse<br>deb-src <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="noopener">http://mirrors.aliyun.com/ubuntu/</a> trusty-security main restricted universe multiverse</p>
+<p>deb-src <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="noopener">http://mirrors.aliyun.com/ubuntu/</a> trusty-updates main restricted universe multiverse<br>deb-src <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="noopener">http://mirrors.aliyun.com/ubuntu/</a> trusty-proposed main restricted universe multiverse<br>deb-src <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="noopener">http://mirrors.aliyun.com/ubuntu/</a> trusty-backports main restricted universe multiverse</p>
+</blockquote>
+<p>end.</p>
+
       
     </div>
     
@@ -386,7 +408,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/交易预测/" rel="tag"># 交易预测</a>
+            <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
+          
+            <a href="/tags/安装/" rel="tag"># 安装</a>
           
         </div>
       
@@ -399,8 +423,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/25/trade-forcast-1-acquire/" rel="next" title="采集">
-                <i class="fa fa-chevron-left"></i> 采集
+              <a href="/2018/03/18/centos-install-gcc4-9-3/" rel="next" title="centos下编译安装gcc4.9.3">
+                <i class="fa fa-chevron-left"></i> centos下编译安装gcc4.9.3
               </a>
             
           </div>
@@ -408,10 +432,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/25/trade-forcast-3-analysis/" rel="prev" title="分析">
-                分析 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -442,8 +462,8 @@
 
   
     <div class="comments" id="comments">
-      <div class="ds-thread" data-thread-key="2018/01/25/trade-forcast-2-preprocess/"
-           data-title="预处理" data-url="http://yoursite.com/2018/01/25/trade-forcast-2-preprocess/">
+      <div class="ds-thread" data-thread-key="2018/03/20/ubuntu-apt-get-source/"
+           data-title="apt-get安装软件" data-url="http://yoursite.com/2018/03/20/ubuntu-apt-get-source/">
       </div>
     </div>
 
@@ -470,8 +490,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -535,6 +564,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#apt-get源没有更新"><span class="nav-number">1.</span> <span class="nav-text">apt-get源没有更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#apt-get源已经过期"><span class="nav-number">2.</span> <span class="nav-text">apt-get源已经过期</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
