@@ -291,7 +291,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/08/blog-cons-on-qcloud/" itemprop="url">blog cons on qcloud</a></h1>
+                <a class="post-title-link" href="/2018/04/08/blog-cons-on-qcloud/" itemprop="url">云服务器环境搭建博客</a></h1>
         
 
         <div class="post-meta">
@@ -374,27 +374,14 @@
 
       
         
-          
-            <p>云服务器环境搭建博客：</p>
-<p>1.创建新用户</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd username</span><br><span class="line">passwd username</span><br></pre></td></tr></table></figure>
-<p>2.添加sudo权限,一下两种方式都可以,之后使用新创建的用户操作</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sudoers</span><br><span class="line">visudo</span><br></pre></td></tr></table></figure>
-<p>3.安装 git</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install git</span><br></pre></td></tr></table></figure>
-<p>4.安装 nginx</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install nginx</span><br></pre></td></tr></table></figure>
-<p>5.安装 nodejs express pm2</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install nodejs</span><br><span class="line">sudo npm install -g express</span><br><span class="line">sudo npm install -g pm2</span><br></pre></td></tr></table></figure>
-<p>6.安装博客</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/username/username.github.io.git blog</span><br><span class="line">cd blog</span><br><span class="line">sudo npm install -g hexo-cli</span><br><span class="line">sudo npm install hexo-server --save</span><br><span class="line">sudo npm install hexo --save</span><br><span class="line">sudo npm install</span><br></pre></td></tr></table></figure>
-<p>7.配置 nginx<br><code>/etc/nginx/conf.d/username.conf 添加以下内容:</code></p>
-<blockquote>
-<p>server {<br>​    listen 80;<br>​    server_name username.wherei.club;<br>​    location / {<br>​        proxy_pass <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>;<br>​    }<br>}</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start nginx.service</span><br></pre></td></tr></table></figure>
-
-          
+          <p>云服务器环境搭建博客
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/08/blog-cons-on-qcloud/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
