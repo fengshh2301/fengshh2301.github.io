@@ -5,7 +5,7 @@ tags: [pokerth]
 categories: [pokerth]
 ---
 
-pokerth在ubuntu14.04下编译:
+pokerth在ubuntu14.04下编译<!-- more -->:
 
 #### It should compile with:
 
