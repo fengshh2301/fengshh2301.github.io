@@ -1,11 +1,11 @@
 ---
-title: blog cons on qcloud
+title: 云服务器环境搭建博客
 date: 2018-04-08 11:54:48
 tags: [安装]
 categories: [工具]
 ---
 
-云服务器环境搭建博客：
+云服务器环境搭建博客<!-- more -->：
 
 1.创建新用户
 
