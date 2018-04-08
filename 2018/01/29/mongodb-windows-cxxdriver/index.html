@@ -377,7 +377,7 @@
 <h3 id="原文："><a href="#原文：" class="headerlink" title="原文："></a>原文：</h3><p>cmake -DCMAKE_BUILD_TYPE=Release<br>​    -DCMAKE_INSTALL_PREFIX=/your/cxxdriver/prefix<br>​    -DLIBMONGOC_DIR=/your/cdriver/prefix<br>​    -DLIBBSON_DIR=/your/cdriver/prefix ..</p>
 <p>msbuild.exe /p:Configuration=Release ALL_BUILD.vcxproj</p>
 <p>msbuild.exe /p:Configuration=Release INSTALL.vcxproj<br>​<br>​    </p>
-<h3 id="实际："><a href="#实际：" class="headerlink" title="实际："></a>实际：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>3.1以下</span><br><span class="line">cmake  -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=E:\workspace\mongo-cxx-driver -DLIBMONGOC_DIR=E:\workspace\mongo-c-driver -DLIBBSON_DIR=E:\workspace\mongo-c-driver -DBOOST_ROOT=E:\workspace\ftrade\external\boost_1_60_0 -DCMAKE_BUILD_TYPE=Release ..</span><br><span class="line"><span class="meta">#</span>3.2以上</span><br><span class="line">cmake  -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=E:\workspace\mongo-cxx-driver  -DCMAKE_PREFIX_PATH=E:\workspace\mongo-c-driver -DBOOST_ROOT=E:\workspace\ftrade\external\boost_1_60_0 -DCMAKE_BUILD_TYPE=Release ..</span><br><span class="line"></span><br><span class="line">msbuild.exe /p:Configuration=Release ALL_BUILD.vcxproj</span><br><span class="line">msbuild.exe /p:Configuration=Release INSTALL.vcxproj</span><br></pre></td></tr></table></figure>
+<h3 id="实际："><a href="#实际：" class="headerlink" title="实际："></a>实际：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">3.1以下</span></span><br><span class="line">cmake  -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=E:\workspace\mongo-cxx-driver -DLIBMONGOC_DIR=E:\workspace\mongo-c-driver -DLIBBSON_DIR=E:\workspace\mongo-c-driver -DBOOST_ROOT=E:\workspace\ftrade\external\boost_1_60_0 -DCMAKE_BUILD_TYPE=Release ..</span><br><span class="line"><span class="meta">#</span><span class="bash">3.2以上</span></span><br><span class="line">cmake  -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=E:\workspace\mongo-cxx-driver  -DCMAKE_PREFIX_PATH=E:\workspace\mongo-c-driver -DBOOST_ROOT=E:\workspace\ftrade\external\boost_1_60_0 -DCMAKE_BUILD_TYPE=Release ..</span><br><span class="line"></span><br><span class="line">msbuild.exe /p:Configuration=Release ALL_BUILD.vcxproj</span><br><span class="line">msbuild.exe /p:Configuration=Release INSTALL.vcxproj</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -510,7 +510,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -521,7 +521,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -532,7 +532,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

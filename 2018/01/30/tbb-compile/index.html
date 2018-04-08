@@ -375,7 +375,7 @@
         <p>程序中需要使用无锁队列，故引用tbb库，做下记录以防遗忘。<a id="more"></a></p>
 <p>进入tbb库根目录。</p>
 <h4 id="linux系统"><a href="#linux系统" class="headerlink" title="linux系统"></a>linux系统</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd tbb</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
-<h4 id="windows系统"><a href="#windows系统" class="headerlink" title="windows系统"></a>windows系统</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd tbb</span><br><span class="line">make</span><br><span class="line"><span class="meta">#</span>32位</span><br><span class="line">msbuild /P:Configuration=Debug /P:Outdir="../../lib/Debug" tbb.vcxproj</span><br><span class="line">msbuild /P:Configuration=Release /P:Outdir="../../lib/Release" tbb.vcxproj</span><br><span class="line"><span class="meta">#</span>64位</span><br><span class="line">msbuild /P:Configuration=Debug /P:Outdir="../../lib/Debug" /P:Platform=x64 tbb.vcxproj</span><br><span class="line">msbuild /P:Configuration=Release /P:Outdir="../../lib/Release" /P:Platform=x64 tbb.vcxproj</span><br></pre></td></tr></table></figure>
+<h4 id="windows系统"><a href="#windows系统" class="headerlink" title="windows系统"></a>windows系统</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd tbb</span><br><span class="line">make</span><br><span class="line"><span class="meta">#</span><span class="bash">32位</span></span><br><span class="line">msbuild /P:Configuration=Debug /P:Outdir="../../lib/Debug" tbb.vcxproj</span><br><span class="line">msbuild /P:Configuration=Release /P:Outdir="../../lib/Release" tbb.vcxproj</span><br><span class="line"><span class="meta">#</span><span class="bash">64位</span></span><br><span class="line">msbuild /P:Configuration=Debug /P:Outdir="../../lib/Debug" /P:Platform=x64 tbb.vcxproj</span><br><span class="line">msbuild /P:Configuration=Release /P:Outdir="../../lib/Release" /P:Platform=x64 tbb.vcxproj</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -506,7 +506,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -517,7 +517,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -528,7 +528,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
