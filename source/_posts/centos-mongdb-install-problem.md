@@ -44,8 +44,9 @@ systemctl restart firewalld.service
 ### 4.如果只允许部分ip访问，可以如下操作：
 
 ```shell
-firewall-cmd --permanent --zone=public --add-source=192.168.100.0/24
-firewall-cmd --permanent --zone=public --add-source=192.168.222.123/32
+sudo firewall-cmd --permanent --zone=public --add-source=192.168.100.0/24
+sudo firewall-cmd --permanent --zone=public --add-source=192.168.222.123/32
+sudo firewall-cmd --permanent --add-rich-rule="rule family='ipv4' source address='10.1.1.1' port protocol='tcp' port='80' accept"
 ```
 
 
