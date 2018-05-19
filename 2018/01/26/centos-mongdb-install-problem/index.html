@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jason&#39;s Blog">
 <meta property="og:description" content="mongdb并非关系型数据库，不太在意安全权限之类，这里做一些最基本的措施。修改默认端口，限制访问ip。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-07T15:49:19.534Z">
+<meta property="og:updated_time" content="2018-04-08T07:43:42.696Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos7安装mongodb安全事项：ip，端口">
 <meta name="twitter:description" content="mongdb并非关系型数据库，不太在意安全权限之类，这里做一些最基本的措施。修改默认端口，限制访问ip。">
@@ -380,7 +380,7 @@
 <h3 id="3-开放访问端口："><a href="#3-开放访问端口：" class="headerlink" title="3.开放访问端口："></a>3.开放访问端口：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=32018/tcp --permanent</span><br><span class="line"></span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
 <p>或者重启防火墙</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart firewalld.service</span><br></pre></td></tr></table></figure>
-<h3 id="4-如果只允许部分ip访问，可以如下操作："><a href="#4-如果只允许部分ip访问，可以如下操作：" class="headerlink" title="4.如果只允许部分ip访问，可以如下操作："></a>4.如果只允许部分ip访问，可以如下操作：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --permanent --zone=public --add-source=192.168.100.0/24</span><br><span class="line">firewall-cmd --permanent --zone=public --add-source=192.168.222.123/32</span><br></pre></td></tr></table></figure>
+<h3 id="4-如果只允许部分ip访问，可以如下操作："><a href="#4-如果只允许部分ip访问，可以如下操作：" class="headerlink" title="4.如果只允许部分ip访问，可以如下操作："></a>4.如果只允许部分ip访问，可以如下操作：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --permanent --zone=public --add-source=192.168.100.0/24</span><br><span class="line">sudo firewall-cmd --permanent --zone=public --add-source=192.168.222.123/32</span><br><span class="line">sudo firewall-cmd --permanent --add-rich-rule="rule family='ipv4' source address='10.1.1.1' port protocol='tcp' port='80' accept"</span><br></pre></td></tr></table></figure>
 <p>或者使用旧命令</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables -I INPUT -p tcp --dport 32018 -j DROP</span><br><span class="line">sudo iptables -I INPUT -s 127.0.0.1 -p tcp --dport 32018 -j ACCEPT</span><br><span class="line">sudo iptables -D -s 192.168.222.123 -p tcp --dport 32018 -j ACCEPT</span><br></pre></td></tr></table></figure>
 
@@ -515,7 +515,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
