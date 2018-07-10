@@ -27,3 +27,14 @@ mount -t cifs -o username=windowsusername,password=windowsuserpassword  //window
 //windowsmacname/space /home/space cifs username=windowsusername,password=windowsuserpassword 0 0
 ```
 
+### 4.mount报错
+
+> mount error(121): Remote I/O error Refer to the mount.cifs(8) manual page (e.g. man mount.cifs)
+
+以上命令改为如下：
+```shell
+mount -t cifs -o username=windowsusername,password=windowsuserpassword,vers=2.1  //windowsmacname/space /home/username/space
+```
+```shell
+//windowsmacname/space /home/space cifs username=windowsusername,password=windowsuserpassword,vers=2.1 0 0
+```
