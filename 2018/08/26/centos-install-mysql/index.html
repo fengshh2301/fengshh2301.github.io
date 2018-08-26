@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="安装,centos,mysql," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="在 CentOS 上安装 MySQL 有四个步骤。">
+<meta name="keywords" content="安装,centos,mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Centos7安装MySQL">
+<meta property="og:url" content="http://yoursite.com/2018/08/26/centos-install-mysql/index.html">
+<meta property="og:site_name" content="Jason&#39;s Blog">
+<meta property="og:description" content="在 CentOS 上安装 MySQL 有四个步骤。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-26T07:57:28.902Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Centos7安装MySQL">
+<meta name="twitter:description" content="在 CentOS 上安装 MySQL 有四个步骤。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/08/26/centos-install-mysql/"/>
+
+
+
+
+
+  <title>Centos7安装MySQL | Jason's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?45a0c096387ab115db0a9d6929718a74";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jason's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/26/centos-install-mysql/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Feng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mine.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jason's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Centos7安装MySQL</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-26T15:29:54+08:00">
+                2018-08-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/贴士/" itemprop="url" rel="index">
+                    <span itemprop="name">贴士</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/26/centos-install-mysql/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/08/26/centos-install-mysql/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在 CentOS 上安装 MySQL 有四个步骤。<a id="more"></a></p>
+<h2 id="添加-MySQL-YUM-源"><a href="#添加-MySQL-YUM-源" class="headerlink" title="添加 MySQL YUM 源"></a>添加 MySQL YUM 源</h2><p>根据自己的操作系统选择合适的<a href="https://link.jianshu.com?t=http://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">安装源</a>，直接获取<a href="https://link.jianshu.com?t=https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm" target="_blank" rel="noopener">下载的地址</a>，下载后通过 <code>rpm -Uvh</code> 安装。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">[jason]$ wget <span class="string">'https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm'</span></span><br><span class="line">[jason]$ sudo rpm -Uvh mysql57-community-release-el7-11.noarch.rpm</span><br><span class="line">[jason]$ yum repolist all | grep mysql</span><br><span class="line">mysql-cluster-7.5-community/x86_64 MySQL Cluster 7.5 Community   disabled</span><br><span class="line">mysql-cluster-7.5-community-source MySQL Cluster 7.5 Community - disabled</span><br><span class="line">mysql-cluster-7.6-community/x86_64 MySQL Cluster 7.6 Community   disabled</span><br><span class="line">mysql-cluster-7.6-community-source MySQL Cluster 7.6 Community - disabled</span><br><span class="line">mysql-connectors-community/x86_64  MySQL Connectors Community    enabled:     63</span><br><span class="line">mysql-connectors-community-source  MySQL Connectors Community -  disabled</span><br><span class="line">mysql-tools-community/x86_64       MySQL Tools Community         enabled:     69</span><br><span class="line">mysql-tools-community-source       MySQL Tools Community - Sourc disabled</span><br><span class="line">mysql-tools-preview/x86_64         MySQL Tools Preview           disabled</span><br><span class="line">mysql-tools-preview-source         MySQL Tools Preview - Source  disabled</span><br><span class="line">mysql55-community/x86_64           MySQL 5.5 Community Server    disabled</span><br><span class="line">mysql55-community-source           MySQL 5.5 Community Server -  disabled</span><br><span class="line">mysql56-community/x86_64           MySQL 5.6 Community Server    disabled</span><br><span class="line">mysql56-community-source           MySQL 5.6 Community Server -  disabled</span><br><span class="line">mysql57-community/x86_64           MySQL 5.7 Community Server    enabled:    287</span><br><span class="line">mysql57-community-source           MySQL 5.7 Community Server -  disabled</span><br><span class="line">mysql80-community/x86_64           MySQL 8.0 Community Server    disabled</span><br><span class="line">mysql80-community-source           MySQL 8.0 Community Server -  disabled</span><br></pre></td></tr></table></figure>
+<p>先解释下为什么下载的是 5.7 版本的，现在最新的是 5.7 版本的，当然官网默认都是最新版本的，但是下载的页面也有说明</p>
+<blockquote>
+<p>The MySQL Yum repository includes the latest versions of:<br>MySQL 8.0 (Development)<br>MySQL 5.7 (GA)<br>MySQL 5.6 (GA)<br>MySQL 5.5 (GA - Red Hat Enterprise Linux and Oracle Linux Only)<br>MySQL Cluster 7.5 (GA)<br>MySQL Cluster 7.6 (Development)<br>MySQL Workbench<br>MySQL Fabric<br>MySQL Router (GA)<br>MySQL Utilities<br>MySQL Connector / ODBC<br>MySQL Connector / Python<br>MySQL Shell (GA)</p>
+</blockquote>
+<p>也就是说这个安装源包含了上面列举的这些版本，当然包括 5.6 版本的。</p>
+<h2 id="选择安装版本"><a href="#选择安装版本" class="headerlink" title="选择安装版本"></a>选择安装版本</h2><p>如果想安装最新版本的，直接使用 yum 命令即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[jason]<span class="variable">$sudo</span> yum install mysql-community-server</span><br></pre></td></tr></table></figure>
+<p>如果想要安装 5.6 版本的，有2个方法。命令行支持 <code>yum-config-manager</code> 命令的话，可以使用如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[jason]$ sudo dnf config-manager --<span class="built_in">disable</span> mysql57-community</span><br><span class="line">[jason]$ sudo dnf config-manager --<span class="built_in">enable</span> mysql56-community</span><br><span class="line">[jason]$ yum repolist | grep mysql</span><br><span class="line">mysql-connectors-community/x86_64 MySQL Connectors Community                  36</span><br><span class="line">mysql-tools-community/x86_64      MySQL Tools Community                       47</span><br><span class="line">mysql56-community/x86_64          MySQL 5.6 Community Server                 327</span><br></pre></td></tr></table></figure>
+<p>或者直接修改 <code>/etc/yum.repos.d/mysql-community.repo</code> 这个文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Enable to use MySQL 5.6</span></span><br><span class="line">[mysql56-community]</span><br><span class="line">name=MySQL 5.6 Community Server</span><br><span class="line">baseurl=http://repo.mysql.com/yum/mysql-5.6-community/el/7/<span class="variable">$basearch</span>/</span><br><span class="line">enabled=1 <span class="comment">#表示当前版本是安装</span></span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql</span><br><span class="line"></span><br><span class="line">[mysql57-community]</span><br><span class="line">name=MySQL 5.7 Community Server</span><br><span class="line">baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/7/<span class="variable">$basearch</span>/</span><br><span class="line">enabled=0 <span class="comment">#默认这个是 1</span></span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql</span><br></pre></td></tr></table></figure>
+<p>通过设置 <code>enabled</code> 来决定安装哪个版本。</p>
+<p>设置好之后使用 <code>yum</code> 安装即可。</p>
+<h2 id="启动-MySQL-服务"><a href="#启动-MySQL-服务" class="headerlink" title="启动 MySQL 服务"></a>启动 MySQL 服务</h2><p>启动命令很简单</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[jason]<span class="variable">$sudo</span> service mysqld start </span><br><span class="line">[jason]<span class="variable">$sudo</span> systemctl start mysqld <span class="comment">#CentOS 7</span></span><br><span class="line">[jason]<span class="variable">$sudo</span> systemctl status mysqld</span><br><span class="line">● mysqld.service - MySQL Community Server</span><br><span class="line">   Loaded: loaded (/usr/lib/systemd/system/mysqld.service; enabled; vendor preset: disabled)</span><br><span class="line">   Active: active (running) since Sat 2017-05-27 12:56:26 CST; 15s ago</span><br><span class="line">  Process: 2482 ExecStartPost=/usr/bin/mysql-systemd-start post (code=exited, status=0/SUCCESS)</span><br><span class="line">  Process: 2421 ExecStartPre=/usr/bin/mysql-systemd-start pre (code=exited, status=0/SUCCESS)</span><br><span class="line"> Main PID: 2481 (mysqld_safe)</span><br><span class="line">   CGroup: /system.slice/mysqld.service</span><br><span class="line">           ├─2481 /bin/sh /usr/bin/mysqld_safe --basedir=/usr</span><br><span class="line">           └─2647 /usr/sbin/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/...</span><br></pre></td></tr></table></figure>
+<p>说明已经正在运行中了。</p>
+<p>对于 MySQL 5.7 版本，启动的时候如果数据为空的，则会出现如下提示</p>
+<blockquote>
+<p>The server is initialized.<br>An SSL certificate and key files are generated in the data directory.<br>The validate_password plugin is installed and enabled.<br>A superuser account ‘root’@’localhost’ is created. A password for the superuser is set and stored in the error log <a href="https://link.jianshu.com?t=http://file.To" target="_blank" rel="noopener">file.To</a> reveal it, use the following command:<br><code>sudo grep &#39;temporary password&#39; /var/log/mysqld.log</code></p>
+</blockquote>
+<p>简单的说就是服务安装好了，SSL 认证的文件会在 data 目录中生存，密码不要设置的太简单了，初始密码通过下面的命令查看，赶紧去改密码吧。<br>安装提示，查看密码，登录数据库，然后修改密码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[jason]$ mysql -uroot -p  <span class="comment">#输入查看到的密码</span></span><br><span class="line">mysql&gt; ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'MyNewPass4!'</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-5-6-的安全设置"><a href="#MySQL-5-6-的安全设置" class="headerlink" title="MySQL 5.6 的安全设置"></a>MySQL 5.6 的安全设置</h2><p>由于 5.7 版本在安装的时候就设置好了，不需要额外设置，但是 5.6 版本建议从安全角度完善下，运行官方脚本即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[jason]$ mysql_secure_installation</span><br></pre></td></tr></table></figure>
+<p>会提示设置5个关键位置</p>
+<ol>
+<li>设置 root 密码</li>
+<li>禁止 root 账号远程登录</li>
+<li>禁止匿名账号（anonymous）登录</li>
+<li>删除测试库</li>
+<li>是否确认修改</li>
+</ol>
+<h2 id="安装第三方组件"><a href="#安装第三方组件" class="headerlink" title="安装第三方组件"></a>安装第三方组件</h2><p>查看 yum 源中有哪些默认的组件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[jason]$ yum --disablerepo=\* --enablerepo=<span class="string">'mysql*-community*'</span> list available</span><br></pre></td></tr></table></figure>
+<p>需要安装直接通过 <code>yum</code> 命令安装即可。</p>
+<h2 id="修改编码"><a href="#修改编码" class="headerlink" title="修改编码"></a>修改编码</h2><p>在 <code>/etc/my.cnf</code> 中设置默认的编码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[client]</span><br><span class="line">default-character-set = utf8</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line">default-storage-engine = INNODB</span><br><span class="line">character-set-server = utf8</span><br><span class="line">collation-server = utf8_general_ci <span class="comment">#不区分大小写</span></span><br><span class="line">collation-server =  utf8_bin <span class="comment">#区分大小写</span></span><br><span class="line">collation-server = utf8_unicode_ci <span class="comment">#比 utf8_general_ci 更准确</span></span><br></pre></td></tr></table></figure>
+<h2 id="创建数据库和用户"><a href="#创建数据库和用户" class="headerlink" title="创建数据库和用户"></a>创建数据库和用户</h2><p>创建数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> &lt;datebasename&gt; <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">'username'</span>@<span class="string">'host'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'password'</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">privileges</span> <span class="keyword">ON</span> databasename.tablename <span class="keyword">TO</span> <span class="string">'username'</span>@<span class="string">'host'</span>;</span><br><span class="line"><span class="keyword">SHOW</span> <span class="keyword">GRANTS</span> <span class="keyword">FOR</span> <span class="string">'username'</span>@<span class="string">'host'</span>;</span><br><span class="line"><span class="keyword">REVOKE</span> privilege <span class="keyword">ON</span> databasename.tablename <span class="keyword">FROM</span> <span class="string">'username'</span>@<span class="string">'host'</span>;</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">USER</span> <span class="string">'username'</span>@<span class="string">'host'</span>;</span><br></pre></td></tr></table></figure>
+<p>其中</p>
+<ul>
+<li>username：你将创建的用户名</li>
+<li>host：指定该用户在哪个主机上可以登陆，如果是本地用户可用 localhost，如果想让该用户可以从任意远程主机登陆，可以使用通配符 %</li>
+<li>password：该用户的登陆密码，密码可以为空，如果为空则该用户可以不需要密码登陆服务器</li>
+<li>privileges：用户的操作权限，如 SELECT，INSERT，UPDATE 等，如果要授予所的权限则使用ALL</li>
+<li>databasename：数据库名</li>
+<li>tablename：表名，如果要授予该用户对所有数据库和表的相应操作权限则可用 <em> 表示，如 </em>.*</li>
+</ul>
+<h2 id="Django-中使用-MySQL"><a href="#Django-中使用-MySQL" class="headerlink" title="Django 中使用 MySQL"></a>Django 中使用 MySQL</h2><p>Django 默认使用的是 sqlite3 数据库，可以修改如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">'default'</span>: &#123;</span><br><span class="line">        <span class="comment"># 'ENGINE': 'django.db.backends.sqlite3',</span></span><br><span class="line">        <span class="comment"># 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),</span></span><br><span class="line">        <span class="string">'ENGINE'</span>: <span class="string">'django.db.backends.mysql'</span>,</span><br><span class="line">         <span class="string">'OPTIONS'</span>: &#123;</span><br><span class="line">            <span class="string">'read_default_file'</span>: <span class="string">'/path/to/my.cnf'</span>,</span><br><span class="line">            <span class="string">'init_command'</span>: <span class="string">"SET sql_mode='STRICT_TRANS_TABLES'"</span> ,</span><br><span class="line">            <span class="string">'isolation_level'</span>:<span class="string">'read committed'</span>,</span><br><span class="line">            <span class="string">'init_command'</span>: <span class="string">'SET default_storage_engine=INNODB'</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">'NAME'</span>: <span class="string">'mydatabase'</span>,</span><br><span class="line">        <span class="string">'USER'</span>: <span class="string">'mydatabaseuser'</span>,</span><br><span class="line">        <span class="string">'PASSWORD'</span>: <span class="string">'mypassword'</span>,</span><br><span class="line">        <span class="string">'HOST'</span>: <span class="string">'127.0.0.1'</span>,</span><br><span class="line">        <span class="string">'PORT'</span>: <span class="string">'3306'</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># my.cnf</span></span><br><span class="line">[client]</span><br><span class="line">database = <span class="string">'mydatabase'</span></span><br><span class="line">user = <span class="string">'mydatabaseuser'</span></span><br><span class="line">password = <span class="string">'mypassword'</span></span><br><span class="line">default-character-set = utf8</span><br></pre></td></tr></table></figure>
+<p>重点关注下 <code>OPTIONS</code> 选项，它会优先与下面的配置项。在 <a href="https://link.jianshu.com?t=https://docs.djangoproject.com/en/1.11/ref/databases/#collation-settings" target="_blank" rel="noopener">Django 官方文档</a>说明中，主要强调了 <code>init_command</code>, <code>isolation_level</code> 这两个选项的设置。</p>
+<h3 id="init-command"><a href="#init-command" class="headerlink" title="init_command"></a>init_command</h3><p>为了防止数据的丢失，mysql 5.7 和新装的 5.6 版本都新增加了一个模式 <code>STRICT_TRANS_TABLES</code>，在这个模式下，如果插入数据中断就会报错，而不是仅仅之前的警告。之前的模式默认为 <code>NO_ENGINE_SUBSTITUTION</code>. 所以也建议设置为 <code>STRICT_TRANS_TABLES</code> 或者 <code>STRICT_ALL_TABLES</code>. 在选项中设置或者在数据库中设置都可以的。</p>
+<h3 id="isolation-level"><a href="#isolation-level" class="headerlink" title="isolation_level"></a>isolation_level</h3><p>这是在 Django 1.11 版本中新增加的一个选择，当运行并发负载时，来自不同会话的数据库事务（例如，处理不同请求的单独线程）可能会相互交互，这些交互受每个会话的事务隔离级别的影响。默认有 5 个隔离级别，默认为 <code>REPEATABLE-READ</code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT @@global.tx_isolation;</span><br><span class="line">+<span class="comment">-----------------------+</span></span><br><span class="line">| @@global.tx_isolation |</span><br><span class="line">+<span class="comment">-----------------------+</span></span><br><span class="line">| REPEATABLE-READ       |</span><br><span class="line">+<span class="comment">-----------------------+</span></span><br><span class="line">1 row in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-  <span class="keyword">read</span> uncommitted </span><br><span class="line"># <span class="keyword">SELECT</span>的时候允许脏读，即<span class="keyword">SELECT</span>会读取其他事务修改而还没有提交的数据。</span><br><span class="line">-  <span class="keyword">read</span> committed</span><br><span class="line"># <span class="keyword">SELECT</span>的时候无法重复读，即同一个事务中两次执行同样的查询语句，若在第一次与第二次查询之间时间段，其他事务又刚好修改了其查询的数据且提交了，则两次读到的数据不一致。</span><br><span class="line">-  repeatable <span class="keyword">read</span></span><br><span class="line"># <span class="keyword">SELECT</span>的时候可以重复读，即同一个事务中两次执行同样的查询语句，得到的数据始终都是一致的。实现的原理是，在一个事务对数据行执行读取或写入操作时锁定了这些数据行。但是这种方式又引发了幻想读的问题。因为只能锁定读取或写入的行，不能阻止另一个事务插入数据，后期执行同样的查询会产生更多的结果。数据库默认的级别。</span><br><span class="line">-  <span class="keyword">serializable</span></span><br><span class="line"># 与可重复读的唯一区别是，默认把普通的<span class="keyword">SELECT</span>语句改成<span class="keyword">SELECT</span> …. <span class="keyword">LOCK</span> <span class="keyword">IN</span> <span class="keyword">SHARE</span> <span class="keyword">MODE</span>。即为查询语句涉及到的数据加上共享琐，阻塞其他事务修改真实数据。<span class="keyword">serializable</span>模式中，事务被强制为依次执行。</span><br><span class="line">-  <span class="keyword">None</span></span><br><span class="line"># 无隔离级别</span><br></pre></td></tr></table></figure>
+<h3 id="MySQL-修改时间戳为服务器时间"><a href="#MySQL-修改时间戳为服务器时间" class="headerlink" title="MySQL 修改时间戳为服务器时间"></a>MySQL 修改时间戳为服务器时间</h3><p>mysql 中默认的时间戳是 UTC 时间，需要改为服务器时间的话官网提供了 3 种方式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[jason]$ mysql_tzinfo_to_sql tz_dir</span><br><span class="line">[jason]$ mysql_tzinfo_to_sql tz_file tz_name</span><br><span class="line">[jason]$ mysql_tzinfo_to_sql --leap tz_file</span><br></pre></td></tr></table></figure>
+<p>tz_dir 代表服务器时间数据库，CentOS 7 中默认的目录为 <code>/usr/share/zoneinfo</code> ，tz_name 为具体的时区。如果设置的时区需要闰秒，则使用 <code>--leap</code>，具体的用法如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[jason]$ mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p mysql</span><br><span class="line">[jason]$ mysql_tzinfo_to_sql tz_file tz_name | mysql -u root mysql</span><br><span class="line">[jason]$ mysql_tzinfo_to_sql --leap tz_file | mysql -u root mysql</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/安装/" rel="tag"># 安装</a>
+          
+            <a href="/tags/centos/" rel="tag"># centos</a>
+          
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/08/centos-mount-windows-dir/" rel="next" title="centos7挂载windows共享文件夹">
+                <i class="fa fa-chevron-left"></i> centos7挂载windows共享文件夹
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="2018/08/26/centos-install-mysql/"
+           data-title="Centos7安装MySQL" data-url="http://yoursite.com/2018/08/26/centos-install-mysql/">
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/mine.png"
+                alt="Jason Feng" />
+            
+              <p class="site-author-name" itemprop="name">Jason Feng</p>
+              <p class="site-description motion-element" itemprop="description">live for dream</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加-MySQL-YUM-源"><span class="nav-number">1.</span> <span class="nav-text">添加 MySQL YUM 源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择安装版本"><span class="nav-number">2.</span> <span class="nav-text">选择安装版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动-MySQL-服务"><span class="nav-number">3.</span> <span class="nav-text">启动 MySQL 服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-5-6-的安全设置"><span class="nav-number">4.</span> <span class="nav-text">MySQL 5.6 的安全设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装第三方组件"><span class="nav-number">5.</span> <span class="nav-text">安装第三方组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改编码"><span class="nav-number">6.</span> <span class="nav-text">修改编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建数据库和用户"><span class="nav-number">7.</span> <span class="nav-text">创建数据库和用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Django-中使用-MySQL"><span class="nav-number">8.</span> <span class="nav-text">Django 中使用 MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#init-command"><span class="nav-number">8.1.</span> <span class="nav-text">init_command</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#isolation-level"><span class="nav-number">8.2.</span> <span class="nav-text">isolation_level</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL-修改时间戳为服务器时间"><span class="nav-number">8.3.</span> <span class="nav-text">MySQL 修改时间戳为服务器时间</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jason Feng</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"fsh"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

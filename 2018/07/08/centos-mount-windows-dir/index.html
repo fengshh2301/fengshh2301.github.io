@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jason&#39;s Blog">
 <meta property="og:description" content="在linux虚拟机里，有时需要与windows共享数据，这个方式方便管用。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-08T10:27:28.402Z">
+<meta property="og:updated_time" content="2018-08-14T09:10:32.550Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos7挂载windows共享文件夹">
 <meta name="twitter:description" content="在linux虚拟机里，有时需要与windows共享数据，这个方式方便管用。">
@@ -378,6 +378,11 @@
 <h3 id="2-centos下执行命令"><a href="#2-centos下执行命令" class="headerlink" title="2.centos下执行命令"></a>2.centos下执行命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t cifs -o username=windowsusername,password=windowsuserpassword  //windowsmacname/space /home/username/space</span><br></pre></td></tr></table></figure>
 <h3 id="3-开机启动就挂载文件夹"><a href="#3-开机启动就挂载文件夹" class="headerlink" title="3.开机启动就挂载文件夹"></a>3.开机启动就挂载文件夹</h3><p>在/etc/fstab文件添加如下命令：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//windowsmacname/space /home/space cifs username=windowsusername,password=windowsuserpassword 0 0</span><br></pre></td></tr></table></figure>
+<h3 id="4-mount报错"><a href="#4-mount报错" class="headerlink" title="4.mount报错"></a>4.mount报错</h3><blockquote>
+<p>mount error(121): Remote I/O error Refer to the mount.cifs(8) manual page (e.g. man mount.cifs)</p>
+</blockquote>
+<p>以上命令改为如下：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t cifs -o username=windowsusername,password=windowsuserpassword,vers=2.1  //windowsmacname/space /home/username/space</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//windowsmacname/space /home/space cifs username=windowsusername,password=windowsuserpassword,vers=2.1 0 0</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -419,6 +424,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/26/centos-install-mysql/" rel="prev" title="Centos7安装MySQL">
+                Centos7安装MySQL <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -506,7 +515,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">48</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -528,7 +537,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -561,7 +570,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-创建共享文件夹"><span class="nav-number">1.</span> <span class="nav-text">1.创建共享文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-centos下执行命令"><span class="nav-number">2.</span> <span class="nav-text">2.centos下执行命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-开机启动就挂载文件夹"><span class="nav-number">3.</span> <span class="nav-text">3.开机启动就挂载文件夹</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-创建共享文件夹"><span class="nav-number">1.</span> <span class="nav-text">1.创建共享文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-centos下执行命令"><span class="nav-number">2.</span> <span class="nav-text">2.centos下执行命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-开机启动就挂载文件夹"><span class="nav-number">3.</span> <span class="nav-text">3.开机启动就挂载文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-mount报错"><span class="nav-number">4.</span> <span class="nav-text">4.mount报错</span></a></li></ol></div>
             
 
           </div>
