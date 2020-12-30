@@ -1,8 +1,8 @@
 ---
-title: centos-docker-setup
+title: centos安装docker
 date: 2020-12-30 12:14:39
 tags: [centos,docker]
-categaries: [工具]
+categories: [工具]
 ---
 
 centos下安装docker<!-- more -->,最好使用阿里的镜像。
